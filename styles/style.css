@@ -1,3 +1,5 @@
+@import url(12cols.css);
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -7,66 +9,37 @@ a {
   text-decoration: none;
 }
 
-.content {
-  max-width: 1000px;
-  margin: 0 auto;
+.fw {
+    width: 1150px;
+    margin: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-nav a { display: block; }
+nav a {
+  display: block;
+}
 nav a.underlined {
   text-align: center;
   border-bottom: 4px solid transparent;
 }
-nav #logo-menu li a.underlined:hover { border-bottom-color: #216477; }
-nav #primary-nav a.underlined:hover { border-bottom-color: white; }
-
-nav #logo-menu {
+#logo-menu .underlined:hover {
+  border-bottom-color: #216477;
+}
+#primary-nav .underlined:hover {
+  border-bottom-color: white;
+}
+#logo-menu {
   border-bottom: 1px solid #ccc;
 }
-nav #logo-menu .content {
+#logo-menu .content {
   display: table;
   width: 100%;
 }
-nav #logo-menu ul {
+#logo-menu ul {
   display: table-row;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-
-
-
-
-nav #logo-menu li {
+#logo-menu li, .logo {
   display: table-cell;
   vertical-align: top;
   line-height: 40px;
@@ -74,23 +47,22 @@ nav #logo-menu li {
   font-weight: bold;
   font-size: 14px;
 }
-nav #logo-menu .sign-in img {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-nav #logo-menu .search {
+
+.search {
   border-right: 0;
+  width: 220px;
 }
-nav #logo-menu .logo { width: 400px; }
-nav #logo-menu .search { width: 220px; }
-nav #logo-menu .search .search-container {
+
+.search-container {
   margin: 8px;
   height: 24px;
   background: #e4e4e4;
 }
-nav #logo-menu .search .search-container input,
-nav #logo-menu .search .search-container img { vertical-align: top; }
-nav #logo-menu .search .search-container input {
+.search-container input,
+.search-container img {
+  vertical-align: top;
+}
+.search-container input {
   background: transparent;
   border: none;
   width: 167px;
@@ -98,44 +70,45 @@ nav #logo-menu .search .search-container input {
   line-height: 24px;
   font-weight: bold;
 }
-nav #logo-menu .search .search-container .search-button {
+.search-button {
   display: inline-block;
   height: 24px;
   width: 24px;
   text-align: center;
 }
-nav #logo-menu .search .search-container .search-button img {
+.search-button img {
   margin-top: 4px;
   vertical-align: top;
 }
-
-
-
-
-
-
-nav #logo-menu .logo img {
-  display: inline-block;
+/*
+#logo-menu .logo img {
   margin: 8px;
   vertical-align: top;
 }
-nav #logo-menu .sign-in { width: 170px; }
-nav #logo-menu .sign-in a.underlined { text-align: left; }
-nav #logo-menu li a.underlined {
+
+#logo-menu .sign-in {
+  width: 170px;
+}
+#logo-menu .sign-in a.underlined {
+  text-align: left;
+}
+*/
+#logo-menu .underlined {
   height: 36px;
   padding: 0 15px;
 }
-
-nav .dark-header { background-color:#216477; }
-
-nav #department,
-nav #primary-nav { color: white; }
-
-nav #department a {
+nav .dark-header {
+  background-color:#216477;
+}
+#department,
+#primary-nav {
+  color: white;
+}
+#department a {
   color: white;
   display: inline-block;
 }
-nav #department h1 {
+#department h1 {
   display: inline-block;
   margin: 0;
   padding: 3px 0;
@@ -143,33 +116,23 @@ nav #department h1 {
   text-transform: uppercase;
   font-weight: normal;
 }
-nav #primary-nav {
+#primary-nav {
   border-top: 1px solid rgba(255,255,255,0.3);
 }
-nav #primary-nav .content {
+#primary-nav .content {
   display: table;
   width: 100%;
 }
-nav #primary-nav ul {
+#primary-nav ul {
   display: table-row;
   height: 36px;
 }
 
-
-
-
-
-
-
-
-
-
-
-nav #primary-nav li {
+#primary-nav li {
   display: table-cell;
   position: relative;
 }
-nav #primary-nav li:after {
+#primary-nav li:after {
   content: '';
   width: 1px;
   height: 18px;
@@ -178,13 +141,11 @@ nav #primary-nav li:after {
   top: 8px;
   right: 0px;
 }
-nav #primary-nav li:last-child:after {
+#primary-nav li:last-child:after {
   content: none;
 }
-nav #primary-nav ul li:last-child a {
-  padding-right: 20px;
-}
-nav #primary-nav ul li:last-child a:after {
+
+#primary-nav ul li:last-child a:after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid #fff;
@@ -195,102 +156,60 @@ nav #primary-nav ul li:last-child a:after {
   top: 11px;
   width: 0;
 }
-
-
-
-nav #primary-nav a {
+#primary-nav a {
   font-size: 15px;
   color: white;
   padding: 8px 12px;
   max-height: 16px;
 }
-nav #primary-nav ul li a.active { border-bottom-color: white; }
-
-
+#primary-nav .active {
+  border-bottom-color: white;
+}
 main {
   margin-top: 20px;
 }
-main .content { position: relative; }
-
-main .main-content,
+main .content {
+  position: relative;
+}
 main .sidebar {
   box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
 }
-
-main .main-content {
-  width: 70%;
-  padding: 0 15px 0 6px;
-}
-main .main-content article {
-  position: relative;
-  min-height: 270px;
-  padding: 0 0 30px 0;
-  border-bottom: 1px solid #eee;
-}
-
-
-
-
-
-
-main .main-content article img.article-image {
-  float: right;
-  margin-left: 10px;
-}
-main .main-content article h2 {
+main article h2 {
   font-size: 2em;
   margin: 10px 0;
   color: black;
 }
-main .main-content article a:hover h2 { color: #216477; }
-main .main-content article p {
+main article a:hover h2 {
+  color: #216477;
+}
+main article p {
   color: #5a5a5a;
   line-height: 1.2em;
   font-size: 0.9em;
 }
 
-
-
-
-
-main .sidebar {
-  width: 30%;
-  padding-left: 15px;
+.sidebar {
   border-left: 1px solid #eee;
 }
-main .sidebar h2 {
+.sidebar h2 {
   margin-top: 0;
   font-weight: normal;
 }
-main .sidebar article { min-height: 60px; }
-main .sidebar article h3 { font-size: 1em; }
-main .sidebar article a:hover h3 { color: #1167a8; }
-main .sidebar article .image {
+.sidebar article {
+  min-height: 60px;
+}
+.sidebar article h3 {
+  font-size: 1em;
+}
+.sidebar article a:hover h3 {
+  color: #1167a8;
+}
+.sidebar .image {
   position: relative;
   margin-right: 10px;
   float: left;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-main .sidebar article .image .time {
+.sidebar .image .time {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -298,38 +217,17 @@ main .sidebar article .image .time {
   background: white;
   font-size: 0.8em;
 }
-main .sidebar article .image .time:before {
+.sidebar .image .time:before {
   content: '';
   position: absolute;
   left: 5px;
   top: 7px;
   width: 0;
   height: 0;
-	
-	
-	
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
   border-left: 10px solid black;
 }
-.sidebar {
-	position: absolute;
-	right: 0;
-	top: 0;
-}
 .post-data {
 	font-size: 0.85em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
