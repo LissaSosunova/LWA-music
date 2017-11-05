@@ -1,0 +1,51 @@
+1) поставить gulp глобально ЭТО ОЧЕНЬ ВАЖНО:
+1.1. в корне диска С открываешь консоль, ставишь npm (если пока не стоял):
+npm install
+1.2.проверяешь:
+npm -v
+1.3. ставишь тут же gulp, обязательно с -g:
+npm install gulp -g
+1.4. проверяешь:
+gulp -v
+
+если не пишет версию, тебе сюда: https://www.tutorialspoint.com/gulp/gulp_installation.htm
+
+там показано как в винде в path установить переменную среды, без этого галп не заработает.
+
+2) после скачивания моего кода (без node_modules, в репрозитории его нет и не будет), вы должны установить у себя npm.
+Если после этого он автоматом не установит все библиотеки (я в файле внесла зависимости, должен это сделать автоматом), то делаем руками, вот перечень команд (--save-dev важно!!):
+npm install angular --save-dev
+npm install node-static --save-dev
+npm install gulp --save-dev
+npm install gulp-build --save-dev
+npm install gulp-clean-css --save-dev
+npm install gulp-concat --save-dev
+npm install gulp-obfuscate --save-dev
+npm install gulp-uglify --save-dev
+npm install gulp-watch --save-dev
+npm install browser-sync --save-dev
+
+проверяем встал ли норм галп, вводим в терминале: gulp css 
+он должен обработать все наши стили и влепить их в файл bin/library.css
+открываете файл, проверяете скомпилил или нет. в результате в папке bin будут файлы css и js с нечитабельным кодом - это значит все отлично.
+
+ВАЖНО: В ФАЙЛЕ gulpfile.js есть функция, которая запускает вотчер и сервер автоматом:
+gulp.task('browserSync', function() {
+    browserSync({
+        server: {
+            baseDir: "./"
+        },
+        middleware: [
+            historyFallback()
+        ],
+        port: 4900,
+        open: true,
+        notify: false
+    });
+});
+
+в ней я поставила порт 4901, т е на нем ищите наш проект. 
+для запуска сервера в консоли вводишь:
+gulp watch 
+все, сервер запущен со всеми приложениями, откроет стартовую страницу в браузере на нужном порте и даже сразу показывает изменения на странице.
+
