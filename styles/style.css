@@ -12,12 +12,13 @@ a {
 
 .fw {
     width: 1150px;
+    max-width: 90%;
     margin: auto;
 }
 nav a {
   display: block;
 }
-nav a.underlined {
+.underlined {
   text-align: center;
   border-bottom: 4px solid transparent;
 }
@@ -29,18 +30,23 @@ nav a.underlined {
 }
 #logo-menu {
   border-bottom: 1px solid #ccc;
+  position: relative;
 }
 #logo-menu .content {
   display: table;
   width: 100%;
 }
-#logo-menu ul {
-  display: table-row;
+.main-menu li {
+  display: inline-block;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-#logo-menu li, .logo {
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+.main-menu li, .logo {
   display: table-cell;
   vertical-align: top;
   line-height: 40px;
@@ -123,13 +129,13 @@ nav .dark-header {
 #primary-nav .content {
   display: table;
   width: 100%;
+  position: relative;
 }
-#primary-nav ul {
+.menu-news {
   display: table-row;
-  height: 36px;
 }
 
-#primary-nav li {
+.menu-news li {
   display: table-cell;
   position: relative;
 }
