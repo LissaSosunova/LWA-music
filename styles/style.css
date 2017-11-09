@@ -54,10 +54,13 @@ ul {
   font-weight: bold;
   font-size: 14px;
 }
-
+.logo {
+  box-sizing: border-box;
+}
 .search {
   border-right: 0;
   width: 220px;
+  box-sizing: border-box;
 }
 
 .search-container {
@@ -72,7 +75,7 @@ ul {
 .search-container input {
   background: transparent;
   border: none;
-  width: 167px;
+  width: 75%;
   padding: 0 0 0 5px;
   line-height: 24px;
   font-weight: bold;
@@ -87,19 +90,6 @@ ul {
   margin-top: 4px;
   vertical-align: top;
 }
-/*
-#logo-menu .logo img {
-  margin: 8px;
-  vertical-align: top;
-}
-
-#logo-menu .sign-in {
-  width: 170px;
-}
-#logo-menu .sign-in a.underlined {
-  text-align: left;
-}
-*/
 #logo-menu .underlined {
   height: 36px;
   padding: 0 15px;
@@ -193,6 +183,11 @@ main article p {
   color: #5a5a5a;
   line-height: 1.2em;
   font-size: 0.9em;
+}
+
+.article-image img {
+  max-width: 400px;
+  width: 100%;
 }
 
 .sidebar {
