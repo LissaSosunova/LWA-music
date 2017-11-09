@@ -1,4 +1,5 @@
 @import url(12cols.css);
+@import url(fontello.css);
 
 body {
   margin: 0;
@@ -11,12 +12,13 @@ a {
 
 .fw {
     width: 1150px;
+    max-width: 90%;
     margin: auto;
 }
 nav a {
   display: block;
 }
-nav a.underlined {
+.underlined {
   text-align: center;
   border-bottom: 4px solid transparent;
 }
@@ -28,18 +30,23 @@ nav a.underlined {
 }
 #logo-menu {
   border-bottom: 1px solid #ccc;
+  position: relative;
 }
 #logo-menu .content {
   display: table;
   width: 100%;
 }
-#logo-menu ul {
-  display: table-row;
+.main-menu li {
+  display: inline-block;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-#logo-menu li, .logo {
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+.main-menu li, .logo {
   display: table-cell;
   vertical-align: top;
   line-height: 40px;
@@ -47,10 +54,13 @@ nav a.underlined {
   font-weight: bold;
   font-size: 14px;
 }
-
+.logo {
+  box-sizing: border-box;
+}
 .search {
   border-right: 0;
   width: 220px;
+  box-sizing: border-box;
 }
 
 .search-container {
@@ -65,7 +75,7 @@ nav a.underlined {
 .search-container input {
   background: transparent;
   border: none;
-  width: 167px;
+  width: 75%;
   padding: 0 0 0 5px;
   line-height: 24px;
   font-weight: bold;
@@ -80,19 +90,6 @@ nav a.underlined {
   margin-top: 4px;
   vertical-align: top;
 }
-/*
-#logo-menu .logo img {
-  margin: 8px;
-  vertical-align: top;
-}
-
-#logo-menu .sign-in {
-  width: 170px;
-}
-#logo-menu .sign-in a.underlined {
-  text-align: left;
-}
-*/
 #logo-menu .underlined {
   height: 36px;
   padding: 0 15px;
@@ -122,13 +119,13 @@ nav .dark-header {
 #primary-nav .content {
   display: table;
   width: 100%;
+  position: relative;
 }
-#primary-nav ul {
+.menu-news {
   display: table-row;
-  height: 36px;
 }
 
-#primary-nav li {
+.menu-news li {
   display: table-cell;
   position: relative;
 }
@@ -186,6 +183,11 @@ main article p {
   color: #5a5a5a;
   line-height: 1.2em;
   font-size: 0.9em;
+}
+
+.article-image img {
+  max-width: 400px;
+  width: 100%;
 }
 
 .sidebar {
