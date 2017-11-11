@@ -6,7 +6,11 @@
     <title>Music News</title>
     <!-- <link rel="stylesheet" href="styles/reset.css"> -->
     <link rel="stylesheet" href="styles/style.css">
-    <script src="app/js/script.js"></script>
+    <!-- <script src="app/js/script.js"></script> -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
+	
 </head>
 
 <body>
@@ -19,17 +23,14 @@
       </div>
       <div class="hmbg-logo icon-menu-outline"></div>
       <ul class="col span_8_of_12 main-menu">
-        <li><a class="underlined" href="#">NEWS</a></li>
-        <li><a class="underlined" href="#">BANDS</a></li>
-        <li><a class="underlined" href="#">INTERVIEW</a></li>
-        <li><a class="underlined" href="#">AUDIO</a></li>
-        <li><a class="underlined" href="#">VIDEO</a></li>
+        <li><a class="underlined" href="#" ui-sref="news">NEWS</a></li>
+        <li><a class="underlined" href="#" ui-sref="bands">BANDS</a></li>
+        <li><a class="underlined" href="#" ui-sref="interview">INTERVIEW</a></li>
+        <li><a class="underlined" href="#" ui-sref="audio">AUDIO</a></li>
+        <li><a class="underlined" href="#" ui-sref="video">VIDEO</a></li>
         <li class="search">
           <div class="search-container">
-            <input type="text" placeholder="Search">
-            <a class="search-button" href="#">
-              <img src="https://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/img/orb-search-dark.png" alt="Search">
-            </a>
+						<form><input ng-model="search" type="search" placeholder="Search"></form>
           </div>
         </li>
       </ul>
@@ -67,52 +68,36 @@
 </nav>
 
 <main>
-  <div class="content fw row">
-    
-      <article class="full-width col span_4_of_12">
-        <a href="#">
-          <h2>Some Music News Title</h2>
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Exc�pteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </a>
-      </article>
-      <div class= "col span_5_of_12 article-image">
-        <img src="images/400x220.png">
-      </div>
-      <div class="sidebar col span_3_of_12">
-        <section>
-        <h2>FRESH VIDEOS</h2>
-        <article>
-          <a href="#">
-            <div class="image">
-              <img src="images/105x60.png" alt="Article image">
-              <div class="time">4:52</div>
-            </div>
-            <h3>Song Name</h3>
-            <p class="post-data">Bands name</p>
-          </a>
-        </article>
-    </section>
-    
+  <div class="content fw row flex">
 		
-    
-      <section>
-      <h2>FRESH VIDEOS</h2>
-      <article>
-        <a href="#">
-          <div class="image">
-            <img src="images/105x60.png" alt="Article image">
-            <div class="time">4:52</div>
-          </div>
-          <h3>Song Name</h3>
-          <p class="post-data">Bands name</p>
-        </a>
-      </article>
-      </section>
+		<div ui-view></div>	
+			
+		<!-- Videos Feed -->	
+ 		<div ng-controller = "news.controller" class="sidebar col span_3_of_12">
+			<section>
+				<h2>FRESH VIDEOS</h2>
+				<article ng-repeat = "x in dataNews">
+					<p class="post-data"><b>{{ x.video.title }}</b> by {{ x.band }}</p>
+					<div class="player">
+						<iframe width="100%" height="150" ng-src="{{ x.video.link | trustUrl }}" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</article>
+			</section>
     </div>
+		<!-- /Videos Feed -->
+		
   </div>
 </main>	
-
+	
+	<script src="src/app.js"></script>
+	<script src="src/news_feed.model.js"></script>
+	<!-- <script src="src/news_feed.controller.js"></script>	 -->
+	
+	<script src="src/pages/audio/audio.controller.js"></script>
+	<script src="src/pages/bands/bands.controller.js"></script>
+	<script src="src/pages/interview/interview.controller.js"></script>
+	<script src="src/pages/news/news.controller.js"></script>
+	<script src="src/pages/video/video.controller.js"></script>
 	
 </body>
 </html>
