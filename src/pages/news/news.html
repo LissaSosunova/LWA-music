@@ -1,0 +1,12 @@
+<div ng-repeat = "x in dataNews | filter:search"> 
+<!-- <div ng-repeat = "x in dataNews"> -->
+	<article class="full-width col span_4_of_12">
+		<a href="#">
+			<h2>{{ x.title }}</h2>
+			<p>{{ x.text }}</p>
+		</a>
+	</article>
+	<div class= "col span_5_of_12 article-image">
+		<img src="{{ x.picture }}">
+	</div>
+</div>
