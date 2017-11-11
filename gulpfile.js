@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var minify = require('gulp-clean-css');
+var minify = require('gulp-minify');
+var minifycss = require('gulp-clean-css');
 var obfuscate = require('gulp-obfuscate');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
@@ -11,7 +11,7 @@ var historyFallback = require('connect-history-api-fallback');
 gulp.task('css', function() {
     return gulp.src('./styles/*.css')
         .pipe(concat('library.css'))
-        .pipe(minify())
+        .pipe(minifycss())
         .pipe(gulp.dest('./bin/'))
         .pipe(reload({ stream: true }));
 });
@@ -26,7 +26,7 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
     return gulp.src('./app/**/*.js')
         .pipe(concat('main.js'))
-        .pipe(uglify())
+        .pipe(minify())
         .pipe(obfuscate())
         .pipe(gulp.dest('./bin/'))
         .pipe(reload({ stream: true }));
