@@ -1,0 +1,21 @@
+{
+    "user": {
+        "id": 5,
+        "title": "User Name"
+    },
+    "cart": {
+        "maxSize": 7,
+        "goods": [
+            {
+                "id": "25",
+                "name": "good 56",
+                "count": 3
+            },
+            {
+                "id": "21",
+                "name": "good 23",
+                "count": 1
+            }
+        ]
+    }
+}
