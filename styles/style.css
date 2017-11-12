@@ -46,7 +46,7 @@ ul {
   padding-left: 0;
   margin-left: 0;
 }
-.main-menu li, .logo {
+.main-menu li {
   display: table-cell;
   vertical-align: top;
   line-height: 40px;
@@ -55,11 +55,21 @@ ul {
   font-size: 14px;
 }
 .logo {
+  display: table-cell;
+  vertical-align: top;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.main-menu li:first-child {
+  border-left: 1px solid #ccc;
+}
+.logo {
   box-sizing: border-box;
 }
 .search {
   border-right: 0;
-  width: 220px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -75,7 +85,7 @@ ul {
 .search-container input {
   background: transparent;
   border: none;
-  width: 75%;
+  width: 100%;
   padding: 0 0 0 5px;
   line-height: 24px;
   font-weight: bold;
