@@ -166,4 +166,7 @@
 	  .main-menu li.search{
 		border-right: 0;
 	  }
+	.player iframe {
+		width: 300px;
+	  }
 }
