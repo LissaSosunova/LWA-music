@@ -4,6 +4,7 @@ window.onload = function(){
     hmbgNews = document.querySelector('.hmbg-news');
     menuNews = document.querySelector('.menu-news');
     input = document.querySelector('.search-container input');
+    menuNewsUnderlined = document.querySelectorAll('.menu-news .underlined');
     function clickMenu (hmbgClick, menu) {
         hmbgClick.addEventListener('click', function(event){
             menu.classList.toggle('is-active');
@@ -38,4 +39,16 @@ window.onload = function(){
     hideMenuClickDoc(mainMenu);
     hideMenuClickDoc(menuNews);
     focusInput(input);
+    deleteLine = menuNewsUnderlined[0];
+    arr = new Array();
+    for (var j=0; j<menuNewsUnderlined.length; j++) {
+        arr[j]=menuNewsUnderlined[j];
+    }
+    for (var i=0; i<arr.length; i++){
+        arr[i].addEventListener('click', function(){
+            deleteLine.classList.remove('active');
+            this.classList.add('active');
+            deleteLine = arr[arr.indexOf(this)];
+        })
+    }
 }
