@@ -18,12 +18,14 @@ a {
 nav a {
   display: block;
 }
-.underlined {
+.main-menu a {
   text-align: center;
-  border-bottom: 4px solid transparent;
 }
-#logo-menu .underlined:hover {
-  border-bottom-color: #216477;
+.underlined {
+  border-bottom: 4px solid #216477;
+}
+#logo-menu li a:hover {
+  border-bottom: 4px solid #216477;
 }
 #primary-nav .underlined:hover {
   border-bottom-color: white;
@@ -100,7 +102,7 @@ ul {
   margin-top: 4px;
   vertical-align: top;
 }
-#logo-menu .underlined {
+#logo-menu li a {
   height: 36px;
   padding: 0 15px;
 }

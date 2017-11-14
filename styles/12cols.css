@@ -159,7 +159,7 @@
 		z-index: 3;
 
 	}
-	nav .underlined {
+	nav .main-menu a {
 		text-align: left;
 		border-bottom: 4px solid transparent;
 	  }

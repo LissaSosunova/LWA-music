@@ -4,6 +4,7 @@ window.onload = function(){
     hmbgNews = document.querySelector('.hmbg-news');
     menuNews = document.querySelector('.menu-news');
     input = document.querySelector('.search-container input');
+    mainMenuUnderlined = document.querySelectorAll('.main-menu li a');
     menuNewsUnderlined = document.querySelectorAll('.menu-news .underlined');
     function clickMenu (hmbgClick, menu) {
         hmbgClick.addEventListener('click', function(event){
@@ -39,16 +40,20 @@ window.onload = function(){
     hideMenuClickDoc(mainMenu);
     hideMenuClickDoc(menuNews);
     focusInput(input);
-    deleteLine = menuNewsUnderlined[0];
-    arr = new Array();
-    for (var j=0; j<menuNewsUnderlined.length; j++) {
-        arr[j]=menuNewsUnderlined[j];
+    function underline (arr, className) {
+        var deleteLine = arr[0];
+        var newArr = new Array();
+        for (var j=0; j<arr.length; j++){
+            newArr[j]=arr[j]
+        }
+        for (var i=0; i<newArr.length; i++){
+            newArr[i].addEventListener('click', function(){
+                deleteLine.classList.remove(className);
+                this.classList.add(className);
+                deleteLine = newArr[newArr.indexOf(this)];
+            })
+        }
     }
-    for (var i=0; i<arr.length; i++){
-        arr[i].addEventListener('click', function(){
-            deleteLine.classList.remove('active');
-            this.classList.add('active');
-            deleteLine = arr[arr.indexOf(this)];
-        })
-    }
+    underline(mainMenuUnderlined, 'underlined');
+    underline(menuNewsUnderlined, 'active');
 }
