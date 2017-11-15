@@ -1,0 +1,91 @@
+@import url(12cols.css);
+ 
+@font-face { 
+	font-family: 'Oswald'; 
+	src: url('../fonts/Oswald/Oswald-Regular.woff') format('woff'); 
+}
+body {
+	margin: 0;
+}
+.bands {
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
+.center_vertical {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.center_horizontal {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/* description */
+.description {
+	text-align: justify;
+}
+.description__title {
+	font-size: 2.5em;
+	margin-bottom: 0;
+	color: #216477;
+}
+
+/* members */
+.members {
+	padding: 10px;
+}
+.members h3 {
+	text-align: center;
+	color: #216477;
+}
+.members img {
+	width: 100%;
+}
+
+/* slider */
+.slider {
+	margin-bottom: 50px;
+}
+.slider__title {
+	color: #216477;
+	font-size: 2em;
+}
+.slider__img {
+    max-width: 650px;
+}
+.slider__img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 25px #216477;
+}
+
+/* media queries */
+@media only screen and (max-width: 992px) {
+	.span_2_of_12 {
+		width: 25%;
+	}
+	.slider__img {
+		max-width: 500px;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.span_10_of_12 {
+		width: 95%;
+	}
+	.span_2_of_12 {
+		width: 45%;
+	}
+	.slider__img {
+		max-width: 100%;
+		padding: 0 1.6%;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.span_2_of_12 {
+		width: 100%;
+	}
+}
