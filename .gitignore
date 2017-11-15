@@ -14,19 +14,17 @@ pids
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
+
+#Edit in GIThub 
+#git rm --cached --ignore-unmatch package-lock.json
 package-lock.json
 #
-
 
 # Users Environment Variables
 .idea
 .vscode/*
 
 # minified & compiled files
-api/uploads/data/*
-client/env/personal.json
-server/config/personal.js
-.DS_Store
-bin-docs
+
 bin
 client/libs/bower/
