@@ -1,8 +1,8 @@
 {
-  "name": "Paragraph",
+  "name": "Music",
   "version": "1.0.0",
   "main": "index.js",
-  "server": "node server/server.js",
+  "server": "node server/index.js",
   "dependencies": {
     "angular-ui-router": "^0.4.3"
   },

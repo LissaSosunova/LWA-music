@@ -12,7 +12,7 @@ app.config(function($stateProvider, $urlRouterProvider){
         
         .state('bands', { 
             url: '/bands', 
-            templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands.html', 
+            templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands.html',
             controller: 'l-bands.controller' 
         })
       

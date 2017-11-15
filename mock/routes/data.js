@@ -54,4 +54,15 @@ function getNewsAll(req, res) {
         });
 }
 
-module.exports = { testGetRequest, testPostRequest, getNewsAll };
+function getBandsAll(req, res) {
+    var servicePromise = filereader(fs, './mock/api/bands/get_bands.json');
+    servicePromise
+        .then((response) => {
+            return response;
+        })
+        .then((response) => {
+            res.json(response);
+        });
+}
+
+module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll };
