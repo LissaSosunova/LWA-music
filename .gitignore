@@ -28,3 +28,4 @@ package-lock.json
 
 bin
 client/libs/bower/
+mock/node_modules
