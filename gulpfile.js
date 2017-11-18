@@ -9,19 +9,20 @@ var reload = browserSync.reload;
 var historyFallback = require('connect-history-api-fallback');
 
 gulp.task('css', function() {
-    return gulp.src('./styles/*.css')
+    return gulp.src('./app/**/*.css')
         .pipe(concat('library.css'))
-        .pipe(minifycss())
+        // .pipe(minifycss())
         .pipe(gulp.dest('./bin/'))
         .pipe(reload({ stream: true }));
 });
 
 
 gulp.task('sass', function() {
-    return gulp.src('./sass/**/*.sass')
+    return gulp.src('./app/**/*.sass')
         .pipe(sass())
         .pipe(gulp.dest('./css'))
 });
+
 
 gulp.task('js', function() {
     return gulp.src('./app/**/*.js')
@@ -50,8 +51,8 @@ gulp.task('watch', function() {
     gulp.start('sass');
     gulp.start('css');
     gulp.start('js');
-    gulp.watch('./sass/**/*.sass', ['sass']);
-    gulp.watch('./css/**/*.css', ['css']);
+    gulp.watch('./app/**/*.sass', ['sass']);
+    gulp.watch('./app/**/*.css', ['css']);
     gulp.watch('./js/**/*.js', ['js']);
 
     gulp.start('browserSync');
@@ -66,7 +67,7 @@ gulp.task('browserSync', function() {
         middleware: [
             historyFallback()
         ],
-        port: 4901,
+        port: 3000,
         open: true,
         notify: false
     });
