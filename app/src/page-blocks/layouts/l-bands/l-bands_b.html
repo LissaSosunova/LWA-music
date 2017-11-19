@@ -1,0 +1,67 @@
+<div class="bands">
+
+    <!-- description -->
+    <section class="center_vertical description">
+        <h2 class="description__title">MORPHINE</h2>
+        <p><i>Years active: 1989 � 1999</i></p>
+        <p class="span_10_of_12">Morphine was an American alternative rock group formed by Mark Sandman, Dana Colley, and Jerome Deupree in Cambridge, Massachusetts in 1989. After five successful albums and extensive touring, they disbanded in 1999 after frontman Sandman died of a heart attack. Founding members have reformed into the band Vapors of Morphine, maintaining much of the original style and sound. Morphine combined blues and jazz elements with more traditional rock arrangements, giving the band an unusual sound. Sandman sang distinctively in a "deep, laid-back croon", and his songwriting featured a prominent beat influence. The band themselves coined the label "low rock" to describe their music, which involved "a minimalist, low-end sound that could have easily become a gimmick: a "power trio" not built around the sound of an electric guitar. Instead, with sly intelligence, Morphine expanded its offbeat vocabulary on each album. The band enjoyed positive critical appraisal, but met with mixed results commercially. In the United States the band was embraced and promoted by the indie rock community, including public and college radio stations and MTV's 120 Minutes, which the band once guest-hosted, but received little support from commercial rock radio and other music television programs. This limited their mainstream exposure and support in their home country, while internationally they enjoyed high-profile success, especially in Belgium, Portugal, France and Australia.</p>
+    </section>
+
+    <!-- members -->
+    <section class="center_horizontal">
+        <article class="span_2_of_12 members">
+            <h3>Mark Sandman</h3>
+            <img src="images/morphine/members/sandman.jpg" alt="name">
+            <p>Mark Sandman (September 24, 1952 � July 3, 1999) was an indie rock icon and longtime fixture in the Boston / Cambridge music scene, best known as the lead singer and bass player of the band Morphine.</p>
+        </article>
+        <article class="span_2_of_12 members">
+            <h3>Dana Colley</h3>
+            <img src="images/morphine/members/dana.jpg" alt="name">
+            <p>Dana Colley (born October 17, 1961 in Portland, Maine) is an American musician, best known as the baritone and tenor saxophonist in the band Morphine.</p>
+        </article>
+        <article class="span_2_of_12 members">
+            <h3>Jerome Deupree</h3>
+            <img src="images/morphine/members/jerome.jpg" alt="name">
+            <p>Jerome Deupree (born November 9, 1956 in Cincinnati, Ohio) is an American musician, based in Massachusetts. He is best known as the original drummer in the band Morphine.</p>
+        </article>
+    </section>
+
+    <!-- slider -->
+    <section class="center_vertical slider">
+        <h3 class="slider__title"><span>MORPHINE</span> gallery</h3>
+        <div class="slider__img">
+            <img src="images/morphine/slider/morpnine_1.jpg">
+        </div>
+        <div class="slider__img">
+            <img src="images/morphine/slider/morpnine_2.jpg">
+        </div>
+        <div class="slider__img">
+            <img src="images/morphine/slider/morpnine_3.jpg">
+        </div>
+    </section>
+
+</div>
+
+<script>
+
+    var index = 0;
+    slider();
+
+    function slider() {
+
+        var img = document.getElementsByClassName("slider__img");
+
+        for (var i = 0; i < img.length; i++) {
+            img[i].style.display = "none";
+        }
+
+        index++;
+
+        if (index > img.length) {
+            index = 1
+        }
+        img[index - 1].style.display = "block";
+        setTimeout(slider, 2500);
+    }
+
+</script>
