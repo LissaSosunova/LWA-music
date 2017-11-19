@@ -1,16 +1,19 @@
-<div ng-controller = "l-bands.controller">
-    <div class="bands" ng-repeat = "x in dataBands" class="row">
+<link rel="stylesheet" href="l-bands.css">
 
-        <article class="full-width col span_5_of_12">
-            <a href="#">
-                <h2>{{ x.band }}</h2>
-                <p>{{ x.active }}</p>
-                <p>{{ x.text }}</p>
-                <p>{{ x.cast }}</p>
-            </a>
+<div class="bands">
+
+    <section class="center_vertical description" ng-repeat = "x in currentBand">
+        <h2 class="description__title">{{ x.band }}</h2>
+        <p><i>{{ x.active }}</i></p>
+        <p class="block1">{{ x.text }}</p>
+    </section>
+
+    <section class="center_horizontal">
+        <article class="block2 members" ng-repeat = "x in currentMembers">
+            <h3>{{ x.name }}</h3>
+            <img src="{{ x.photo }}" alt="name">
+            <p>{{ x.description }}</p>
         </article>
+    </section>
 
-    </div>
 </div>
-
-

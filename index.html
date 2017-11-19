@@ -6,6 +6,8 @@
     <title>Music News</title>
     <!-- <link rel="stylesheet" href="styles/reset.css"> -->
     <link rel="stylesheet" href="app/css/style.css">
+    <link rel="stylesheet" href="app/src/page-blocks/layouts/l-bands/l-bands.css">
+    <link rel="stylesheet" href="app/src/page-blocks/layouts/l-bands/l-bands-list.css">
     <script src="app/js/navbar.js"></script>
 
     <script src="vendor/angular.min.js"></script>
@@ -13,7 +15,7 @@
 	
 </head>
 
-<body>
+<body ng-controller="root.controller">
 
 <nav>
   <div id="logo-menu">
@@ -30,19 +32,19 @@
         <li><a href="#" ui-sref="video">VIDEO</a></li>
         <li class="search">
           <div class="search-container">
-						<form><input ng-model="search" type="search" placeholder="Search"></form>
+			<form><input ng-model="search" type="search" placeholder="Search"></form>
           </div>
         </li>
       </ul>
     </div>
   </div>
 
-        <div class="dark-header fw row">
-            <div id="department">
-                <div class="content col span_12_of_12">
-                    <a href="#"><h1>MUSIC NEWS</h1></a>
-                </div>
-            </div>
+  <div class="dark-header fw row">
+    <div id="department">
+        <div class="content col span_12_of_12">
+            <a href="#"><h1>MUSIC NEWS</h1></a>
+        </div>
+    </div>
 
     <div id="primary-nav">
       <div class="content col span_12_of_12">
@@ -68,22 +70,9 @@
     <main>
         <div class="content fw row flex">
             
-            <div ui-view class="col span_9_of_12"></div>	
-                    
-            <!-- Videos Feed -->	
-            <div ng-controller = "l-news.controller" class="sidebar col span_3_of_12">
-                <section>
-                    <h2>FRESH VIDEOS</h2>
-                    <article ng-repeat = "x in dataNews">
-                        <p class="post-data"><b>{{ x.video.title }}</b> by {{ x.band }}</p>
-                        <div class="player">
-                            <iframe width="100%" height="150" ng-src="{{ x.video.link | trustUrl }}" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </article>
-                </section>
-            </div>
-            <!-- /Videos Feed -->
-            
+            <div ui-view="viewA" class="col span_9_of_12"></div>	
+            <div ui-view="viewB" class="sidebar col span_3_of_12"></div>	
+                          
         </div>
     </main>	
 	
@@ -91,9 +80,12 @@
 	<script src="app/js/config/route.config.js"></script>
 	<script src="app/src/page-blocks/layouts/l-audio/l-audio.controller.js"></script>
 	<script src="app/src/page-blocks/layouts/l-bands/l-bands.controller.js"></script>
+	<script src="app/src/page-blocks/layouts/l-bands/l-bands-list.controller.js"></script>
 	<script src="app/src/page-blocks/layouts/l-interview/l-interview.controller.js"></script>
 	<script src="app/src/page-blocks/layouts/l-news/l-news.controller.js"></script>
+	<script src="app/src/page-blocks/layouts/l-news/l-news-vid.controller.js"></script>
 	<script src="app/src/page-blocks/layouts/l-video/l-video.controller.js"></script>
+	<script src="app/src/common-blocks/root.controller.js"></script>
     
 </body>
 </html>
