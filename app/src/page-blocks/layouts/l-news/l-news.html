@@ -1,5 +1,5 @@
-<div ng-repeat = "x in dataNews" class="row">
-<!-- <div ng-repeat = "x in dataNews"> -->
+<div ng-repeat = "x in dataNews | filter:search" class="row">
+
 	<article class="full-width col span_5_of_12">
 		<a href="#">
 			<h2>{{ x.title }}</h2>
@@ -9,4 +9,5 @@
 	<div class= "col span_7_of_12 article-image">
 		<img src="{{ x.picture }}">
 	</div>
+    
 </div>

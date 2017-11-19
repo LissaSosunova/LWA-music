@@ -1,0 +1,46 @@
+.bands {
+	font-size: 16px;
+}
+.center_vertical {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.center_horizontal {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.description {
+	text-align: justify;
+}
+.description__title {
+	font-size: 2.5em;
+	margin-bottom: 0;
+	color: #216477;
+}
+.members {
+	padding: 10px;
+}
+.members h3 {
+	text-align: center;
+	color: #216477;
+}
+.members img {
+	width: 100%;
+}
+.block2 {
+    width: 30%;
+}
+
+/* media queries */
+@media only screen and (max-width: 576px) {
+	.block2 {
+		width: 70%;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.block2 {
+		width: 100%;
+	}
+}

@@ -1,4 +1,4 @@
-app.controller("l-news.controller", function($scope, $http) {
+app.controller("l-news-vid.controller", function($scope, $http) {
 
     $scope.dataNews = {};
     
