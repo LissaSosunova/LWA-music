@@ -56,4 +56,6 @@ window.onload = function(){
     }
     underline(mainMenuUnderlined, 'underlined');
     underline(menuNewsUnderlined, 'active');
+
+   
 }
