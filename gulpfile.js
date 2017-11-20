@@ -10,7 +10,7 @@ var historyFallback = require('connect-history-api-fallback');
 
 gulp.task('css', function() {
     return gulp.src('./app/**/*.css')
-        .pipe(concat('library.css'))
+        .pipe(concat('main.css'))
         // .pipe(minifycss())
         .pipe(gulp.dest('./bin/'))
         .pipe(reload({ stream: true }));
