@@ -6,6 +6,8 @@ logs
 pids
 *.pid
 *.seed
+# Ignore db
+*.db
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -28,3 +30,5 @@ package-lock.json
 
 bin
 client/libs/bower/
+mock/node_modules
+node_modules
