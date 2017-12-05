@@ -2,6 +2,7 @@ app.controller("l-bands.controller", function($scope, $http) {
     
     $scope.dataBands = {};
     
+    /*
     function init() {
         
         $http({
@@ -11,6 +12,8 @@ app.controller("l-bands.controller", function($scope, $http) {
             .then(function success(response) {
                 // console.log('ответ сервера по bands', response);
                 $scope.dataBands = response.data.bandsAll;
+                
+                
                 for(let i=0; i<$scope.dataBands.length; i++){
                     console.log($scope.dataBands[i].band, 'состав: ', $scope.dataBands[i].cast);
                      
@@ -21,9 +24,9 @@ app.controller("l-bands.controller", function($scope, $http) {
     }
     
     init();
+      */
       
-      
-      
+     /* 
 	$scope.$on("bandDataEvent2", function(event, data){console.log(data);
         
 		$scope.currentBand = data;
@@ -32,9 +35,9 @@ app.controller("l-bands.controller", function($scope, $http) {
         $scope.currentMembers = data.band.cast;
         console.log($scope.currentMembers);
 	});
+    */
     
-    
-    
+    /*
     function displayLastBand(data) {
          
         $scope.currentBand = [];
@@ -43,6 +46,6 @@ app.controller("l-bands.controller", function($scope, $http) {
                         
         $scope.currentMembers = data[0].cast;
         console.log( $scope.currentMembers );
-    }
+    }*/
 
 });

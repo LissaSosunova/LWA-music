@@ -1,0 +1,28 @@
+{
+    "id": "item3",
+    "band": "BadBadNotGood",
+    "active": "Years active: 2010 – present",
+    "text": "BadBadNotGood (stylized as BADBADNOTGOOD) is a music group from Toronto, Ontario. The group includes Matthew Tavares on keys, Chester Hansen on bass, Leland Whitty on saxophone, and Alexander Sowinski on drums. They are known for their interpretations of hip hop tracks and their collaborations with Kendrick Lamar, Tyler, The Creator, Earl Sweatshirt, Danny Brown, and Ghostface Killah. Matthew Tavares, Alexander Sowinski, and Chester Hansen met in 2010 through the Humber College jazz program in Toronto. The trio united over a shared love for hip hop music, including that of MF Doom and Odd Future. Hansen plays acoustic and electric bass in the group, while Sowinski, who often dons a pig mask during performances, is on drums and sampler. Tavares handles keys, playing rhythms on a Prophet '08 and electric piano. The name of the band came from the tentative title of a comedy television project that Tavares was working on, which was eventually abandoned.",
+    "cast": [
+      {
+        "name": "Matthew Tavares",
+        "photo": "mock/data/img/badbadnotgood/bands/matt.jpg",
+        "description": "Matthew A. Tavares - keyboards (2010–present)"
+      },
+      {
+        "name": "Alexander Sowinski",
+        "photo": "mock/data/img/badbadnotgood/bands/alex.jpg",
+        "description": "Alexander Sowinski - drums, sampler (2010–present)"
+      },
+      {
+        "name": "Chester Hansen",
+        "photo": "mock/data/img/badbadnotgood/bands/ches.jpg",
+        "description": "Chester Hansen - bass guitar, upright bass (2010–present)"
+      },
+      {
+        "name": "Leland Whitty",
+        "photo": "mock/data/img/badbadnotgood/bands/leland.jpg",
+        "description": "Leland Whitty - saxophone, flute, viola, violin, guitar (2016–present)"
+      }
+    ]
+  }

@@ -1,7 +1,7 @@
 app.controller("l-bands-list.controller", function($scope, $http) {
-    
+
     $scope.dataBands = {};
-    
+    //$scope.dataCurrBand = {};
     function init() {
         
         $http({
@@ -11,23 +11,34 @@ app.controller("l-bands-list.controller", function($scope, $http) {
             .then(function success(response) {
                 // console.log('ответ сервера по bands', response);
                 $scope.dataBands = response.data.bandsAll;
-                for(let i=0; i<$scope.dataBands.length; i++){
-                    console.log($scope.dataBands[i].band, 'состав: ', $scope.dataBands[i].cast);
-                }
+                console.log($scope.dataBands)
             });
     }
     
     init();
-    
-    $scope.displayBand = function( x ) { 
-        
-        console.log( x );
-        $scope.bandData = x;
-        
-        $scope.$emit("bandDataEvent", {
-            band: $scope.bandData
+    displayDefaultBand = function () {
+        var key = "Morphine"
+        $http({
+            method: 'GET',
+            url: 'http://localhost:5000/bands/'+ key
         })
-	}
+        .then(function Band(response){
+            $scope.dataCurrBand = response.data;
+            console.log($scope.dataCurrBand);
+        })
+    }
+    displayDefaultBand();
+    $scope.displayCurrBand = function(item){
+        var key = item.band.toLowerCase();
+        $http({
+            method: 'GET',
+            url: 'http://localhost:5000/bands/'+ key
+        })
+        .then(function renderBand(response){
+            $scope.dataCurrBand = response.data;
+            console.log($scope.dataCurrBand);
+        })
+    }
     
     
     $scope.states = {};

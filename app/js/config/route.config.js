@@ -23,7 +23,7 @@ app.config(function($stateProvider, $urlRouterProvider){
             views: {
                 "viewA": {
                     templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands.html',  
-                    controller: 'l-bands.controller'
+                    controller: 'l-bands-list.controller'
                 },
                 "viewB": {
                     templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands-list.html',  

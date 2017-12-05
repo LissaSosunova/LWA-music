@@ -2,14 +2,14 @@
 
 <div class="bands">
 
-    <section class="center_vertical description" ng-repeat = "x in currentBand">
-        <h2 class="description__title">{{ x.band }}</h2>
-        <p><i>{{ x.active }}</i></p>
-        <p class="block1">{{ x.text }}</p>
+    <section class="center_vertical description">
+        <h2 class="description__title">{{dataCurrBand.band}}</h2>
+        <p><i>{{dataCurrBand.active}}</i></p>
+        <p class="block1">{{ dataCurrBand.text }}</p>
     </section>
 
     <section class="center_horizontal">
-        <article class="block2 members" ng-repeat = "x in currentMembers">
+        <article class="block2 members" ng-repeat = "x in dataCurrBand.cast">
             <h3>{{ x.name }}</h3>
             <img src="{{ x.photo }}" alt="name">
             <p>{{ x.description }}</p>

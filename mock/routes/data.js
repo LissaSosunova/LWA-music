@@ -55,7 +55,7 @@ function getNewsAll(req, res) {
 }
 
 function getBandsAll(req, res) {
-    var servicePromise = filereader(fs, './mock/api/bands/get_bands.json');
+    var servicePromise = filereader(fs, './mock/api/bands/get_bands.json');   
     servicePromise
         .then((response) => {
             return response;
@@ -64,5 +64,19 @@ function getBandsAll(req, res) {
             res.json(response);
         });
 }
+        
+function getCurrBand (req, res) {
+    var path = './mock/api/bands/'+ req.params.name +'/get.json';
+    var servicePromise = filereader(fs, path);
 
-module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll };
+    console.log('GET', path)
+    servicePromise
+    .then((response) => {
+        return response;
+    })
+    .then((response) => {
+        res.json(response);
+    });
+}
+
+module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand };

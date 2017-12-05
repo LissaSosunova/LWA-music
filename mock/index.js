@@ -30,9 +30,12 @@ app.route('/postTest')
 app.route('/news')
     .get($data.getNewsAll);
 
-app.route('/bands')
+
+    app.route('/bands')
     .get($data.getBandsAll);
 
+app.route('/bands/:name')
+.get($data.getCurrBand);
 
 app.listen(port);
 console.log("Mock server listening on port " + port);
