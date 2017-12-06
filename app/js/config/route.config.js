@@ -23,13 +23,32 @@ app.config(function($stateProvider, $urlRouterProvider){
             views: {
                 "viewA": {
                     templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands.html',  
-                    controller: 'l-bands-list.controller'
+                    controller: 'l-bands.controller'
                 },
                 "viewB": {
-                    templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands-list.html',  
+                    templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands-list.html',
                     controller: 'l-bands-list.controller'
-                }
-            }            
+                },
+
+            }
+        })
+
+        .state('oneBand', {
+            url: '/oneBand',
+            views: {
+                "viewA": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-bands/l-one-band.html',
+                    controller: 'l-one-band.controller'
+                },
+                "viewB": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands-list.html',
+                    controller: 'l-bands-list.controller'
+                },
+
+            },
+            params: {
+                data: {}
+            }
         })
       
         .state('interview', {

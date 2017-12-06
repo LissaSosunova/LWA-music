@@ -1,53 +1,44 @@
-app.controller("l-bands-list.controller", function($scope, $http) {
+app.controller("l-bands-list.controller", function($scope, $http, $state) {
 
     $scope.dataBands = {};
-    //$scope.dataCurrBand = {};
+    $scope.dataCurrBand = {};
+
     function init() {
-        
         $http({
             method: 'GET',
             url: 'http://localhost:5000/bands'
         })
             .then(function success(response) {
-                // console.log('ответ сервера по bands', response);
                 $scope.dataBands = response.data.bandsAll;
-                console.log($scope.dataBands)
             });
     }
-    
     init();
-    displayDefaultBand = function () {
-        var key = "Morphine"
-        $http({
-            method: 'GET',
-            url: 'http://localhost:5000/bands/'+ key
-        })
-        .then(function Band(response){
-            $scope.dataCurrBand = response.data;
-            console.log($scope.dataCurrBand);
-        })
-    }
-    displayDefaultBand();
+
     $scope.displayCurrBand = function(item){
-        var key = item.band.toLowerCase();
+        let key = item.band.toLowerCase();
         $http({
             method: 'GET',
             url: 'http://localhost:5000/bands/'+ key
         })
         .then(function renderBand(response){
             $scope.dataCurrBand = response.data;
-            console.log($scope.dataCurrBand);
+            function renderBand(data) {
+                console.log(data);
+                $state.go(
+                    'oneBand',
+                    { data: data });
+            }
+            renderBand($scope.dataCurrBand);
         })
-    }
-    
-    
+    };
     $scope.states = {};
     $scope.states.activeItem = '';
 
 });
 
+// этот скрипт навешен на все окно, кликни по тексту и увидишь
 app.directive('userhover', function () {
-    
+
     return {
         link: function ($scope, element, attrs) {
 
@@ -56,7 +47,7 @@ app.directive('userhover', function () {
                 element.css('font-weight', 'bold');
                 element.css('cursor', 'pointer');
             });
-            
+
             element.bind('mouseleave', function () {
                 element.css('color', 'black');
                 element.css('font-weight', 'normal');
