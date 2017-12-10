@@ -1,4 +1,4 @@
-window.onload = function(){
+//window.onload = function(){
     hmbgMenu = document.querySelector('.hmbg-logo');
     mainMenu = document.querySelector('.main-menu');
     hmbgNews = document.querySelector('.hmbg-news');
@@ -56,6 +56,4 @@ window.onload = function(){
     }
     underline(mainMenuUnderlined, 'underlined');
     underline(menuNewsUnderlined, 'active');
-
-   
-}
+//}

@@ -27,8 +27,8 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
     return gulp.src('./app/**/*.js')
         .pipe(concat('main.js'))
-        .pipe(minify())
-        .pipe(obfuscate())
+        //.pipe(minify())
+        //.pipe(obfuscate())
         .pipe(gulp.dest('./bin/'))
         .pipe(reload({ stream: true }));
 });

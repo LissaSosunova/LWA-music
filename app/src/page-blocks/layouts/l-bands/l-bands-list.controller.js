@@ -1,4 +1,4 @@
-app.controller("l-bands-list.controller", function($scope, $http, $state) {
+app.controller("l-bands-list.controller", function($scope, $http, $state, dataBand) {
 
     $scope.dataBands = {};
     $scope.dataCurrBand = {};
@@ -22,21 +22,17 @@ app.controller("l-bands-list.controller", function($scope, $http, $state) {
         })
         .then(function renderBand(response){
             $scope.dataCurrBand = response.data;
-            function renderBand(data) {
-                console.log(data);
-                $state.go(
-                    'oneBand',
-                    { data: data });
-            }
-            renderBand($scope.dataCurrBand);
+            dataBand.set($scope.dataCurrBand);
+            dataBand.get();
         })
+        
     };
     $scope.states = {};
     $scope.states.activeItem = '';
-
 });
 
-// этот скрипт навешен на все окно, кликни по тексту и увидишь
+
+
 app.directive('userhover', function () {
 
     return {

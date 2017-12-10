@@ -16,6 +16,7 @@
 .showAll {
     margin-bottom: 15px;
     cursor: pointer;
+    display: none;
 }
 .view-block {
     margin: 20px 0;
