@@ -54,4 +54,29 @@ function getNewsAll(req, res) {
         });
 }
 
-module.exports = { testGetRequest, testPostRequest, getNewsAll };
+function getBandsAll(req, res) {
+    var servicePromise = filereader(fs, './mock/api/bands/get_bands.json');   
+    servicePromise
+        .then((response) => {
+            return response;
+        })
+        .then((response) => {
+            res.json(response);
+        });
+}
+        
+function getCurrBand (req, res) {
+    var path = './mock/api/bands/'+ req.params.name +'/get.json';
+    var servicePromise = filereader(fs, path);
+
+    console.log('GET', path)
+    servicePromise
+    .then((response) => {
+        return response;
+    })
+    .then((response) => {
+        res.json(response);
+    });
+}
+
+module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand };

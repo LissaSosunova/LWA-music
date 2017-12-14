@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="l-bands.css">
 
-<div class="bands" ui-sref="bands">
+<div class="bands">
 
     <section class="center_vertical description">
-        <h2 class="description__title">{{dataCurrBand.band}}</h2>
-        <p><i>{{dataCurrBand.active}}</i></p>
-        <p class="block1">{{ dataCurrBand.text }}</p>
+        <h2 class="description__title">{{currBand.band}}</h2>
+        <p><i>{{currBand.active}}</i></p>
+        <p class="block1">{{ currBand.text }}</p>
     </section>
 
     <section class="center_horizontal">
-        <article class="block2 members" ng-repeat = "x in dataCurrBand.cast">
+        <article class="block2 members" ng-repeat = "x in currBand.cast">
             <h3>{{ x.name }}</h3>
             <img src="{{ x.photo }}" alt="name">
             <p>{{ x.description }}</p>

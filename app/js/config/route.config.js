@@ -5,15 +5,32 @@ app.config(function($stateProvider, $urlRouterProvider){
     $stateProvider
     
         .state('news', { 
-            url: '/news', 
-            templateUrl: 'app/src/page-blocks/layouts/l-news/l-news.html',  
-            controller: 'l-news.controller' 
+            url: '/news',
+            views: {
+                "viewA": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-news/l-news.html',  
+                    controller: 'l-news.controller'
+                },
+                "viewB": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-news/l-news-vid.html',  
+                    controller: 'l-news-vid.controller'
+                }
+            }
         })
         
         .state('bands', { 
             url: '/bands', 
-            templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands.html', 
-            controller: 'l-bands.controller' 
+            views: {
+                "viewA": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands.html',  
+                    controller: 'l-bands.controller'
+                },
+                "viewB": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands-list.html',
+                    controller: 'l-bands-list.controller'
+                },
+
+            }
         })
       
         .state('interview', {

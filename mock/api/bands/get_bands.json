@@ -1,0 +1,78 @@
+{
+  "bandsAll": [
+    {
+      "id": "item1",
+      "band": "Morphine",
+      "active": "Years active: 1989 - 1999",
+      "text": "Morphine was an American alternative rock group formed by Mark Sandman, Dana Colley, and Jerome Deupree in Cambridge, Massachusetts in 1989. After five successful albums and extensive touring, they disbanded in 1999 after frontman Sandman died of a heart attack. Founding members have reformed into the band Vapors of Morphine, maintaining much of the original style and sound. Morphine combined blues and jazz elements with more traditional rock arrangements, giving the band an unusual sound. Sandman sang distinctively in a \"deep, laid-back croon\", and his songwriting featured a prominent beat influence. The band themselves coined the label \"low rock\" to describe their music, which involved \"a minimalist, low-end sound that could have easily become a gimmick: a \"power trio\" not built around the sound of an electric guitar. Instead, with sly intelligence, Morphine expanded its offbeat vocabulary on each album. The band enjoyed positive critical appraisal, but met with mixed results commercially. In the United States the band was embraced and promoted by the indie rock community, including public and college radio stations and MTV's 120 Minutes, which the band once guest-hosted, but received little support from commercial rock radio and other music television programs. This limited their mainstream exposure and support in their home country, while internationally they enjoyed high-profile success, especially in Belgium, Portugal, France and Australia.",
+      "cast": [
+        {
+          "name": "Mark Sandman",
+          "photo": "mock/data/img/morphine/bands/sandman.jpg",
+          "description": "Mark Sandman (September 24, 1952 - July 3, 1999) was an indie rock icon and longtime fixture in the Boston / Cambridge music scene, best known as the lead singer and bass player of the band Morphine."
+        },
+        {
+          "name": "Dana Colley",
+          "photo": "mock/data/img/morphine/bands/dana.jpg",
+          "description": "Dana Colley (born October 17, 1961 in Portland, Maine) is an American musician, best known as the baritone and tenor saxophonist in the band Morphine."
+        },
+        {
+          "name": "Jerome Deupree",
+          "photo": "mock/data/img/morphine/bands/jerome.jpg",
+          "description": "Jerome Deupree (born November 9, 1956 in Cincinnati, Ohio) is an American musician, based in Massachusetts. He is best known as the original drummer in the band Morphine."
+        }
+      ]
+    },
+    {
+      "id": "item2",
+      "band": "Nirvana",
+      "active": "Years active: 1987 - 1994",
+      "text": "Nirvana was an American rock band formed by singer and guitarist Kurt Cobain and bassist Krist Novoselic in Aberdeen, Washington, in 1987. Nirvana went through a succession of drummers, the longest-lasting being Dave Grohl, who joined in 1990. Despite releasing only three full-length studio albums in their seven-year career, Nirvana has come to be regarded as one of the most influential and important alternative bands in history. Though the band dissolved in 1994 after the death of Cobain, their music maintains a popular following and continues to influence modern rock and roll culture.In the late 1980s, Nirvana established itself as part of the Seattle grunge scene, releasing its first album, Bleach, for the independent record label Sub Pop in 1989. They developed a sound that relied on dynamic contrasts, often between quiet verses and loud, heavy choruses. After signing to major label DGC Records, Nirvana found unexpected success with Smells Like Teen Spirit, the first single from the band's second album Nevermind (1991). Nirvana's sudden success widely popularized alternative rock, and Cobain found himself referred to in the media as the spokesman of a generation, with Nirvana considered the flagship band of Generation X. Nirvana's third studio album, In Utero (1993), released to critical acclaim, featured an abrasive, less mainstream sound and challenged the group's audience. Nirvana's active career ended following the death of Cobain in 1994, but various posthumous releases have been issued since, overseen by Novoselic, Grohl, and Cobain's widow Courtney Love. Since its debut, the band has sold over 25 million records in the United States alone, and over 75 million records worldwide, making them one of the best-selling bands of all time. Nirvana was inducted into the Rock and Roll Hall of Fame in 2014, in its first year of eligibility.",
+      "cast": [
+        {
+          "name": "Kurt Cobain",
+          "photo": "mock/data/img/nirvana/bands/kurt.jpg",
+          "description": "Kurt Donald Cobain (February 20, 1967 – April 5, 1994) was an American musician, artist, singer, songwriter, guitarist and poet. Born in Aberdeen, Washington, Cobain formed the band Nirvana with Krist Novoselic in 1987 and established it as part of the Seattle music scene and grunge genre."
+        },
+        {
+          "name": "Krist Novoselic",
+          "photo": "mock/data/img/nirvana/bands/krist.jpg",
+          "description": "Krist Anthony Novoselic (born May 16, 1965) is an American rock musician, and was the bass guitarist and founding member of the grunge band Nirvana."
+        },
+        {
+          "name": "Dave Grohl",
+          "photo": "mock/data/img/nirvana/bands/dave.jpg",
+          "description": "David Eric Grohl (born January 14, 1969) is an American musician, guitarist, singer, drummer, songwriter, record producer, and film director."
+        }
+      ]
+    },
+    {
+      "id": "item3",
+      "band": "BadBadNotGood",
+      "active": "Years active: 2010 – present",
+      "text": "BadBadNotGood (stylized as BADBADNOTGOOD) is a music group from Toronto, Ontario. The group includes Matthew Tavares on keys, Chester Hansen on bass, Leland Whitty on saxophone, and Alexander Sowinski on drums. They are known for their interpretations of hip hop tracks and their collaborations with Kendrick Lamar, Tyler, The Creator, Earl Sweatshirt, Danny Brown, and Ghostface Killah. Matthew Tavares, Alexander Sowinski, and Chester Hansen met in 2010 through the Humber College jazz program in Toronto. The trio united over a shared love for hip hop music, including that of MF Doom and Odd Future. Hansen plays acoustic and electric bass in the group, while Sowinski, who often dons a pig mask during performances, is on drums and sampler. Tavares handles keys, playing rhythms on a Prophet '08 and electric piano. The name of the band came from the tentative title of a comedy television project that Tavares was working on, which was eventually abandoned.",
+      "cast": [
+        {
+          "name": "Matthew Tavares",
+          "photo": "mock/data/img/badbadnotgood/bands/matt.jpg",
+          "description": "Matthew A. Tavares - keyboards (2010–present)"
+        },
+        {
+          "name": "Alexander Sowinski",
+          "photo": "mock/data/img/badbadnotgood/bands/alex.jpg",
+          "description": "Alexander Sowinski - drums, sampler (2010–present)"
+        },
+        {
+          "name": "Chester Hansen",
+          "photo": "mock/data/img/badbadnotgood/bands/ches.jpg",
+          "description": "Chester Hansen - bass guitar, upright bass (2010–present)"
+        },
+        {
+          "name": "Leland Whitty",
+          "photo": "mock/data/img/badbadnotgood/bands/leland.jpg",
+          "description": "Leland Whitty - saxophone, flute, viola, violin, guitar (2016–present)"
+        }
+      ]
+    }
+  ]
+}
