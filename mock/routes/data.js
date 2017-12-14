@@ -79,4 +79,15 @@ function getCurrBand (req, res) {
     });
 }
 
-module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand };
+function getMenu (req, res) {
+    var servicePromise = filereader(fs, './mock/api/menu/get_menu.json');
+    servicePromise
+        .then((response) => {
+            return response;
+        })
+        .then((response) => {
+            res.json(response);
+        });
+}
+
+module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand, getMenu };

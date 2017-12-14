@@ -30,7 +30,9 @@ app.route('/postTest')
 app.route('/news')
     .get($data.getNewsAll);
 
-
+app.route('/menu')
+    .get($data.getMenu);
+    
     app.route('/bands')
     .get($data.getBandsAll);
 

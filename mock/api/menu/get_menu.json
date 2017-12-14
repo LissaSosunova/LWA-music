@@ -1,0 +1,24 @@
+{
+    "dataItems": [
+      {
+        "title": "NEWS",
+        "uisref": "news"
+      },
+      {
+        "title": "BANDS",
+        "uisref": "bands"
+      },
+      {
+        "title": "INTERVIEW",
+        "uisref": "interview"
+      },
+      {
+        "title": "AUDIO",
+        "uisref": "audio"
+      },
+      {
+        "title": "VIDEO",
+        "uisref": "video"
+      }
+    ]
+}

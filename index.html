@@ -5,11 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music News</title>
     <link rel="stylesheet" href="bin/main.css">
-<<<<<<< HEAD
-=======
     <!--<script src="app/js/navbar.js"></script>-->
 
->>>>>>> state bands was completed
     <script src="vendor/angular.min.js"></script>
     <script src="vendor/angular-ui-router.min.js"></script>
     
@@ -24,20 +21,14 @@
         <a href="#">MusicNewsLogo</a>
       </div>
       <div class="hmbg-logo icon-menu-outline"></div>
-      <ul class="col span_8_of_12 main-menu">
-        <li><a class="underlined" href="#" ui-sref="news">NEWS</a></li>
-        <li><a href="#" ui-sref="bands">BANDS</a></li>
-        <li><a href="#" ui-sref="interview">INTERVIEW</a></li>
-        <li><a href="#" ui-sref="audio">AUDIO</a></li>
-        <li><a href="#" ui-sref="video">VIDEO</a></li>
-        <li class="search">
-          <div class="search-container">
-			<form><input ng-model="search" type="search" placeholder="Search"></form>
-          </div>
-        </li>
-      </ul>
+      <ul class="col span_6_of_12 main-menu" menu-block="dataMenu"></ul>
+      <div class="search col span_2_of_12">
+        <div class="search-container">
+          <form><input ng-model="search" type="search" placeholder="Search"></form>
+        </div>
+      </div>
     </div>
-  </div>
+  </div>  
 
   <div class="dark-header fw row">
     <div id="department">
@@ -90,8 +81,12 @@
 	<script src="app/src/page-blocks/layouts/l-news/l-news-vid.controller.js"></script>
 	<script src="app/src/page-blocks/layouts/l-video/l-video.controller.js"></script>
   <script src="app/src/common-blocks/root.controller.js"></script>
+<<<<<<< HEAD
   -->
   
+=======
+  <script src="app/src/common-blocks/menu/menu_directive.js"></script>
+>>>>>>> added directive
     
 </body>
 </html>
