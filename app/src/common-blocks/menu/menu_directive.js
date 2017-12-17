@@ -9,6 +9,6 @@ app.directive("menuBlock", function ($timeout) {
             
         },
         restrict: "A",
-        template: "<li ng-repeat='item in data'><a href='#' ui-sref='{{item.uisref}}'>{{ item.title }}</a></li>" 
+        templateUrl: "./app/src/common-blocks/menu/menu.html" 
     }
 });

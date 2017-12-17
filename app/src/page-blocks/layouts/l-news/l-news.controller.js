@@ -1,7 +1,8 @@
 app.controller("l-news.controller", function($scope, $http) {
 
     $scope.dataNews = {};
-    
+    $scope.temp = {};
+   // $scope.newArr = [];
     function init() {
         
         $http({
@@ -15,26 +16,28 @@ app.controller("l-news.controller", function($scope, $http) {
     }
 
     init();
-	$scope.showNews = function(item, arr) {
+	$scope.showNews = function(item, arr, temp) {
                 newArr = [];
                 arr.forEach((el, i) => {
                     newArr[i] = arr[i]
                 });
+                console.log(temp);
                 arr.splice(0, newArr.length, newArr[newArr.indexOf(item)]);
-                blocks = document.querySelectorAll('.full-width');
-                showAllBtn = document.querySelectorAll('.showAll');
+                var blocks = document.querySelectorAll('.full-width');
+                var showAllBtn = document.querySelectorAll('.showAll');
                 showAllBtn[this.$index].style.display = "block";
-                curShowAllBtn = showAllBtn[this.$index];
-                curBlock = blocks[this.$index];
+                temp.curShowAllBtn = showAllBtn[this.$index];
+                temp.curBlock = blocks[this.$index];
                 blocks[this.$index].classList.remove('full-width');
-                button = document.querySelectorAll('.show');
-                curButton = button[this.$index];
+                var button = document.querySelectorAll('.show');
+                temp.curButton = button[this.$index];
                 button[this.$index].style.display = "none";
            }
-           $scope.showAll = function (item, arr) {
-                curBlock.classList.add('full-width');
-                curButton.style.display = "block";
-                curShowAllBtn.style.display = "none";
+           $scope.showAll = function (item, arr, temp) {
+                temp.curBlock.classList.add('full-width');
+                temp.curButton.style.display = "block";
+                temp.curShowAllBtn.style.display = "none";
+                console.log(temp);
                 newArr.forEach((el, i) =>{
                     arr[i] = newArr[i]
                 });
