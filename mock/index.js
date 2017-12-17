@@ -39,6 +39,12 @@ app.route('/menu')
 app.route('/bands/:name')
 .get($data.getCurrBand);
 
+app.route('/interview')
+    .get($data.getInterviewAll);
+
+app.route('/interview/:id')
+    .get($data.getInterview);
+
 app.listen(port);
 console.log("Mock server listening on port " + port);
 

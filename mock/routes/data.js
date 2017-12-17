@@ -90,4 +90,28 @@ function getMenu (req, res) {
         });
 }
 
-module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand, getMenu };
+function getInterviewAll (req, res) {
+    var servicePromise = filereader(fs, './mock/api/interview/interview_list.json');
+    servicePromise
+        .then((response) => {
+            console.log(response);
+            return response;
+        })
+        .then((response) => {
+            res.json(response);
+        });
+}
+
+function getInterview (req, res) {
+    var servicePromise = filereader(fs, './mock/api/interview/'+ req.params.id +'/get.json');
+    servicePromise
+        .then((response) => {
+            console.log(response);
+            return response;
+        })
+        .then((response) => {
+            res.json(response);
+        });
+}
+
+module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand, getMenu, getInterviewAll, getInterview };
