@@ -70,13 +70,10 @@ ul {
   box-sizing: border-box;
 }
 .search {
-  border-right: 0;
-  width: 100%;
-  box-sizing: border-box;
+    
 }
-
 .search-container {
-  margin: 8px;
+  margin: 8px 0;
   height: 24px;
   background: #e4e4e4;
 }
