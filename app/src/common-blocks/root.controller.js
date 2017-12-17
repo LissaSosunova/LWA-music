@@ -8,8 +8,7 @@ app.controller("root.controller", function($scope, $http) {
 			// $scope.$broadcast("bandDataEvent2", data);
 		// });
 	// });
-    
-    
+
     
     $scope.dataMenu = {};
     
@@ -20,7 +19,6 @@ app.controller("root.controller", function($scope, $http) {
             url: 'http://localhost:5000/menu'
         })
             .then(function success(response) {
-                console.log('ответ сервера по menu');
                 $scope.dataMenu = response.data.dataItems;
             });
     })();

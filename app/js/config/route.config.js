@@ -32,11 +32,19 @@ app.config(function($stateProvider, $urlRouterProvider){
 
             }
         })
-      
+
         .state('interview', {
             url: '/interview',
-            templateUrl: 'app/src/page-blocks/layouts/l-interview/l-interview.html',
-            controller: 'l-interview.controller'
+            views: {
+                "viewA": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-interview/l-interview.html',
+                    controller: 'l-interview.controller'
+                },
+                "viewB": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands-list.html',
+                    controller: 'l-bands-list.controller'
+                },
+            }
         })
         
         .state('audio', {
