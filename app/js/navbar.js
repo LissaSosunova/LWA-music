@@ -1,4 +1,4 @@
-//window.onload = function(){
+window.onload = function(){
     hmbgMenu = document.querySelector('.hmbg-logo');
     mainMenu = document.querySelector('.main-menu');
     hmbgNews = document.querySelector('.hmbg-news');
@@ -54,6 +54,10 @@
             })
         }
     }
+    function defaultUnderline (arr, className) {
+        arr[0].classList.add(className);
+    }
+    defaultUnderline (mainMenuUnderlined, 'underlined');
     underline(mainMenuUnderlined, 'underlined');
     underline(menuNewsUnderlined, 'active');
-//}
+}
