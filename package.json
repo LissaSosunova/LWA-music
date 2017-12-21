@@ -16,6 +16,7 @@
     "gulp-minify": "^2.1.0",
     "gulp-obfuscate": "^0.2.9",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-watch": "^4.3.11",
     "node-static": "^0.7.10"
   },

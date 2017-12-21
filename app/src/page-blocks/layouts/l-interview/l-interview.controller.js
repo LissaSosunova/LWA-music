@@ -16,5 +16,4 @@ app.controller("l-interview.controller", function($scope, $http, $state){
     $scope.showName = function (data) {
         console.log(data);
     }
-
 });

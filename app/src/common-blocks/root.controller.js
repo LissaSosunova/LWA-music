@@ -1,17 +1,6 @@
 app.controller("root.controller", function($scope, $http) {
-    
-	// $scope.$on("bandDataEvent", function(event, data){
-        
-		// console.log(data); 
-		
-		// $timeout(function(){
-			// $scope.$broadcast("bandDataEvent2", data);
-		// });
-	// });
+     $scope.dataMenu = {};
 
-    
-    $scope.dataMenu = {};
-    
     (function init() {
         
         $http({

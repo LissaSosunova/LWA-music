@@ -9,7 +9,6 @@ app.controller("l-news-vid.controller", function($scope, $http) {
             url: 'http://localhost:5000/news'
         })
             .then(function success(response) {
-                console.log('ответ сервера по news',);
                 $scope.dataNews = response.data.dataNews;
             });
     }

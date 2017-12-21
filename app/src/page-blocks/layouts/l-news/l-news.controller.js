@@ -1,8 +1,6 @@
 app.controller("l-news.controller", function($scope, $http) {
-
     $scope.dataNews = {};
     $scope.temp = {};
-   // $scope.newArr = [];
     function init() {
         
         $http({
@@ -10,7 +8,6 @@ app.controller("l-news.controller", function($scope, $http) {
             url: 'http://localhost:5000/news'
         })
             .then(function success(response) {
-                console.log('ответ сервера по news',);
                 $scope.dataNews = response.data.dataNews;
             });
     }
@@ -37,7 +34,6 @@ app.controller("l-news.controller", function($scope, $http) {
                 temp.curBlock.classList.add('full-width');
                 temp.curButton.style.display = "block";
                 temp.curShowAllBtn.style.display = "none";
-                console.log(temp);
                 newArr.forEach((el, i) =>{
                     arr[i] = newArr[i]
                 });
