@@ -1,5 +1,17 @@
-<li ng-repeat='item in data.list' ng-click="data.actions[$index]()">
+<div class="project-info">
 
-    <a href=''>{{ item.title }}</a>
+    <button class="project-info__btn">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </button>
     
-</li>
+    <div class="project-info__data bounce-animation">
+        <div class="project-info__data-item"
+            ng-repeat='item in data.list' 
+            ng-click="data.actions[$index]()">
+            <a href=''>{{ item.title }}</a>
+        </div>
+    </div>
+    
+</div>

@@ -1,13 +1,13 @@
 {
     "dataItems": [
       {
-        "title": "block1"
+        "title": "About Project"
       },
       {
-        "title": "block2"
+        "title": "Project Team"
       },
       {
-        "title": "block3"
+        "title": "Contacts"
       }
     ]
 }

@@ -6,13 +6,13 @@ app.controller("root.controller", function($scope, $http) {
         list: [],
         actions: [
             function(){
-                console.log(111);
+                alert("About Project");
             },
             function(){
-                console.log(222);
+                alert("Project Team");
             },
             function(){
-                console.log(333);
+                alert("Contacts");
             }  
         ]
     };
