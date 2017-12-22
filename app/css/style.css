@@ -248,9 +248,19 @@ iframe {
 .post-data {
 	font-size: 0.85em;
 }
-
-/* update 11.11.17 */
 .flex {
 	display: flex;
 	flex-wrap: wrap;
+}
+.nav {
+    position: relative;
+}
+.point__block {
+    width: 30px;
+    height: 130px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    cursor: pointer;
 }
