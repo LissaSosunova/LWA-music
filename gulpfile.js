@@ -14,7 +14,7 @@ let paths = {
         common: 'app/src/sass/**/*.sass'
     },
     css: {
-        libs: 'app/libs/**/*.css',
+        libs: 'app/src/**/*.css',
         main: 'app/css/**/*.css'
     },
     bundle: {
@@ -55,6 +55,7 @@ gulp.task('clean', function del(cb) {
 
 gulp.task('watch',['js', 'sass', 'css', 'bundle:js'], function () {
     gulp.watch(paths.js, ['js']);
+    gulp.watch([paths.css.libs, paths.css.main], ['css']);
     gulp.watch([paths.sass.common, paths.sass.blocks], ['sass']);
     gulp.start('browserSync');
 });
