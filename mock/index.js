@@ -33,17 +33,20 @@ app.route('/news')
 app.route('/menu')
     .get($data.getMenu);
     
-    app.route('/bands')
+app.route('/bands')
     .get($data.getBandsAll);
 
 app.route('/bands/:name')
-.get($data.getCurrBand);
+    .get($data.getCurrBand);
 
 app.route('/interview')
     .get($data.getInterviewAll);
 
 app.route('/interview/:id')
     .get($data.getInterview);
+    
+app.route('/point__block')
+    .get($data.getPointBlock);
 
 app.listen(port);
 console.log("Mock server listening on port " + port);
