@@ -114,4 +114,15 @@ function getInterview (req, res) {
         });
 }
 
-module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand, getMenu, getInterviewAll, getInterview };
+function getPointBlock (req, res) {
+    var servicePromise = filereader(fs, './mock/api/point__block/get_point__block.json');
+    servicePromise
+        .then((response) => {
+            return response;
+        })
+        .then((response) => {
+            res.json(response);
+        });
+}
+
+module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand, getMenu, getInterviewAll, getInterview, getPointBlock };

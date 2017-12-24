@@ -105,6 +105,7 @@ ul {
 }
 nav .dark-header {
   background-color:#216477;
+  position: relative;
 }
 #department,
 #primary-nav {
@@ -248,9 +249,63 @@ iframe {
 .post-data {
 	font-size: 0.85em;
 }
-
-/* update 11.11.17 */
 .flex {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+/* Three dots button *********************/
+.project-info {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.project-info__btn {
+    background: none;
+    border: 0 none;
+    cursor: pointer;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.project-info__data {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: -5px;
+	z-index: 2;
+}
+.project-info__data-item {
+	width: 120px;
+	padding: 10px;
+	border: 1px solid #216477;
+	border-bottom: none;
+	text-align: center;
+	background-color: #fff;
+	cursor: pointer;
+}
+.project-info__data-item:last-child {
+    border-bottom: 1px solid #216477;
+}
+.bounce-animation {
+	animation: bounce 1s;
+	visibility: visible;
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+@keyframes bounce {
+    0% {
+		opacity: 0;
+		transform: translateY(100%);
+    } 
+    100% {
+		transform: translateY(0%);
+    }
 }
