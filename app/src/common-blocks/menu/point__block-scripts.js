@@ -1,3 +1,4 @@
+/*
 window.onload = function(){
     
     var dotBtn = document.querySelector(".project-info__btn");
@@ -28,4 +29,4 @@ window.onload = function(){
         }
         document.addEventListener("click", behindMenu, true);
     }
-};
+};*/

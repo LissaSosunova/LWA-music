@@ -6,6 +6,7 @@
 }
 .news_view{
    position: relative;
+   height: 300px;
 }
 .show {
     position: absolute;
@@ -21,3 +22,6 @@
 .view-block {
     margin: 20px 0;
 }
+.article-image img {
+    max-height: 300px;
+  }

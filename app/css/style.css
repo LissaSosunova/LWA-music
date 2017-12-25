@@ -1,6 +1,3 @@
-@import url(12cols.css);
-@import url(fontello.css);
-
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -25,7 +22,8 @@ nav a {
   border-bottom: 4px solid #216477;
 }
 #logo-menu li a:hover {
-  border-bottom: 4px solid #216477;
+  background-color: #817a7a;
+  border-bottom: 4px solid #817a7a;
 }
 #primary-nav .underlined:hover {
   border-bottom-color: white;
@@ -68,9 +66,6 @@ ul {
 }
 .logo {
   box-sizing: border-box;
-}
-.search {
-    
 }
 .search-container {
   margin: 8px 0;
@@ -198,10 +193,7 @@ main article p {
   font-size: 0.9em;
 }
 
-.article-image img {
-  max-width: 400px;
-  width: 100%;
-}
+
 
 .sidebar {
   border-left: 1px solid #eee;
@@ -252,60 +244,4 @@ iframe {
 .flex {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-/* Three dots button *********************/
-.project-info {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
-.project-info__btn {
-    background: none;
-    border: 0 none;
-    cursor: pointer;
-}
-.dot {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background-color: #fff;
-    border-radius: 50%;
-}
-.project-info__data {
-	display: none;
-	position: absolute;
-	top: 20px;
-	right: -5px;
-	z-index: 2;
-}
-.project-info__data-item {
-	width: 120px;
-	padding: 10px;
-	border: 1px solid #216477;
-	border-bottom: none;
-	text-align: center;
-	background-color: #fff;
-	cursor: pointer;
-}
-.project-info__data-item:last-child {
-    border-bottom: 1px solid #216477;
-}
-.bounce-animation {
-	animation: bounce 1s;
-	visibility: visible;
-}
-button, 
-button:active, 
-button:focus {
-    outline: none;
-}
-@keyframes bounce {
-    0% {
-		opacity: 0;
-		transform: translateY(100%);
-    } 
-    100% {
-		transform: translateY(0%);
-    }
 }
