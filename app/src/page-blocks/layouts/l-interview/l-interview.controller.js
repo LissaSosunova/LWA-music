@@ -1,11 +1,10 @@
-app.controller("l-interview.controller", function($scope, $http, $state){
+app.controller("l-interview.controller", function($scope, $http, $flowData){
 
     $scope.interviews = {};
 
     function init() {
-        $http({
-            method: 'GET',
-            url: 'http://localhost:5000/interview/'
+        $flowData.req({
+            path: 'interview'
         })
             .then(function success(response) {
                 $scope.interviews = response.data.list;

@@ -1,12 +1,11 @@
-app.controller("l-bands-list.controller", function($scope, $http, $state, dataBand) {
+app.controller("l-bands-list.controller", function($scope, $flowData, dataBand) {
 
     $scope.dataBands = {};
     $scope.dataCurrBand = {};
 
     function init() {
-        $http({
-            method: 'GET',
-            url: 'http://localhost:5000/bands'
+        $flowData.req({
+            path: 'bands'
         })
             .then(function success(response) {
                 $scope.dataBands = response.data.bandsAll;
@@ -16,9 +15,8 @@ app.controller("l-bands-list.controller", function($scope, $http, $state, dataBa
 
     $scope.displayCurrBand = function(item){
         let key = item.band.toLowerCase();
-        $http({
-            method: 'GET',
-            url: 'http://localhost:5000/bands/'+ key
+        $flowData.req({
+            path: 'bands/'+key
         })
         .then(function renderBand(response){
             $scope.dataCurrBand = response.data;

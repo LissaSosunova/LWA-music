@@ -1,11 +1,9 @@
-app.controller("l-news.controller", function($scope, $http) {
+app.controller("l-news.controller", function($scope, $flowData) {
     $scope.dataNews = {};
     $scope.temp = {};
     function init() {
-        
-        $http({
-            method: 'GET',
-            url: 'http://localhost:5000/news'
+        $flowData.req({
+            path: 'news'
         })
             .then(function success(response) {
                 $scope.dataNews = response.data.dataNews;

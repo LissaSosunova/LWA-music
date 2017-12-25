@@ -1,12 +1,11 @@
-app.controller("l-bands.controller", function($scope, $http, $state, dataBand) {
+app.controller("l-bands.controller", function($scope, dataBand, $flowData) {
 
     $scope.dataBands = {};
 
     displayDefaultBand = function () {
         let key = "Morphine";
-        $http({
-            method: 'GET',
-            url: 'http://localhost:5000/bands/'+ key
+        $flowData.req({
+            path: 'bands/'+key
         })
             .then(function (response){
                 $scope.dataCurrBand = response.data;
