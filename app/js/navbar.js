@@ -36,7 +36,6 @@ window.onload = function(){
     menuNews = document.querySelector('.menu-news');
     input = document.querySelector('.search-container input');
     mainMenuUnderlined = document.querySelectorAll('.main-menu li a');
-    console.log(mainMenuUnderlined);
     menuNewsUnderlined = document.querySelectorAll('.menu-news .underlined');
     function clickMenu (hmbgClick, menu) {
         hmbgClick.addEventListener('click', function(event){

@@ -1,9 +1,22 @@
 {
-  "data": [
+  "years": [
     {
-      "title": "Morphine",
-      "content": "Some text1",
-      "img_src": "#"
+      "1997": {
+        "band": "Morphine",
+        "title": "Our attitude is every tour could be our last tour.",
+        "artist": "Mark Sandman",
+        "date": "February 10, 1997",
+        "link": "http://thekatztapes.com/mark-sandman-morphine/",
+        "text": "As much as I (and many others) liked Morphine’s music, it was not a band anyone ever expected to see sign a major label record deal. Too much going against it: the druggy name, the dark sound, the beat poet lyrics, the oddball instrumentation: drums, baritone sax and a two-string bass, whatever the hell a two-string bass was. I mean, really?  But Morphine defied my expectations and likely their own. I sat down for dinner with Morphine’s leader, two-string bass inventor Mark Sandman, at maybe his favorite hangout spot – the Middle East, a restaurant/rock club complex – in maybe his favorite neighborhood – Central Square – one month before the release of “Like Swimming,” the band’s fourth album and its first for a big label, Dreamworks. We ate falafel, drank beer and talked, the 44-year old Sandman exhibiting a dry sense of humor and a laconic demeanor that matched sleepy Robert Mitchum eyes that didn’t miss a thing. I was as stunned as everyone else when a bit more than two years later -–on July 3, 1999 – Sandman collapsed onstage at Palestrina, Italy, felled by a fatal heart attack. I suspect that there is a lot of casual chit-chat on the original tape recording of our conversation (made over the course of a leisurely meal) that I didn’t bother to transcribe at the time, given my aim was to write a focused column in the Boston Herald. I hope to re-listen to the tape and transcribe every word of it sometime in the future. Until then, I give you the following, which includes not everything Mark said, but all of the best parts."
+      },
+      "1991": {
+        "band": "Morphine",
+        "title": "Our attitude is every tour could be our last tour.",
+        "artist": "Mark Sandman",
+        "date": "February 10, 1997",
+        "link": "http://thekatztapes.com/mark-sandman-morphine/",
+        "text": "As much as I (and many others) liked Morphine’s music, it was not a band anyone ever expected to see sign a major label record deal. Too much going against it: the druggy name, the dark sound, the beat poet lyrics, the oddball instrumentation: drums, baritone sax and a two-string bass, whatever the hell a two-string bass was. I mean, really?  But Morphine defied my expectations and likely their own. I sat down for dinner with Morphine’s leader, two-string bass inventor Mark Sandman, at maybe his favorite hangout spot – the Middle East, a restaurant/rock club complex – in maybe his favorite neighborhood – Central Square – one month before the release of “Like Swimming,” the band’s fourth album and its first for a big label, Dreamworks. We ate falafel, drank beer and talked, the 44-year old Sandman exhibiting a dry sense of humor and a laconic demeanor that matched sleepy Robert Mitchum eyes that didn’t miss a thing. I was as stunned as everyone else when a bit more than two years later -–on July 3, 1999 – Sandman collapsed onstage at Palestrina, Italy, felled by a fatal heart attack. I suspect that there is a lot of casual chit-chat on the original tape recording of our conversation (made over the course of a leisurely meal) that I didn’t bother to transcribe at the time, given my aim was to write a focused column in the Boston Herald. I hope to re-listen to the tape and transcribe every word of it sometime in the future. Until then, I give you the following, which includes not everything Mark said, but all of the best parts."
+      }
     }
   ]
 }

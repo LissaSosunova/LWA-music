@@ -1,0 +1,41 @@
+.int-menu-list{
+    color: #2d303a;
+    font-weight: 500;
+}
+.int-menu-list:hover{
+    color: #1167a8;
+}
+
+.div-dots-drop-down{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 50%;
+    background-color: #216477;
+    color: white;
+    text-align: center;
+}
+
+.div-int-menu-text{
+    display: inline-block;
+    margin: 20px;
+}
+
+.div-drop-down-block{
+    position: absolute;
+    background-color: #216477;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px;
+    padding: 10px;
+    transition: .2s;
+    display: none;
+}
+.div-drop-down-block.active {
+    display: block;
+}
+

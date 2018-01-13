@@ -1,0 +1,7 @@
+<div class="div-dots-drop-down col-xs-6 col-md-6 col-lg-6" ng-click="showList()"><span class="dot"></span>
+    <div  class="div-drop-down-block" ng-class="{ 'active': show }" >
+        <ul>
+            <li ng-repeat="item in list" ng-click="oneInt(item)">{{ item.date }}</li>
+        </ul>
+    </div>
+</div>

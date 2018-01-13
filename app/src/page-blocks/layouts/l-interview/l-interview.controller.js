@@ -1,18 +1,14 @@
-app.controller("l-interview.controller", function($scope, $http, $flowData){
+app.controller("l-interview.controller", function($scope, $interviewsData, $state ){
 
     $scope.interviews = {};
+    $scope.show = false;
 
     function init() {
-        $flowData.req({
-            path: 'interview'
-        })
+        $interviewsData
+            .interviewsList()
             .then(function success(response) {
                 $scope.interviews = response.data.list;
-                console.log(response.data.list);
             });
     }
     init();
-    $scope.showName = function (data) {
-        console.log(data);
-    }
 });

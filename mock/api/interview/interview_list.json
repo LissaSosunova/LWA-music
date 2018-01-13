@@ -2,15 +2,69 @@
   "list": [
     {
       "title": "Morphine",
-      "href": "1"
+      "href": "1",
+      "years": [
+        {
+          "band": "Morphine",
+          "title": "Mark Sandman interview",
+          "artist": "Mark Sandman",
+          "date": "1997",
+          "link": "https://www.youtube.com/watch?v=Y6LkzC-LVKw",
+          "text": ""
+        },
+        {
+          "band": "Morphine",
+          "title": "Morphine 1993 NPR Interview",
+          "artist": "Mark Sandman",
+          "date": "1993",
+          "link": "https://www.youtube.com/watch?v=Rx9rJI_SLEI",
+          "text": ""
+        },
+        {
+          "band": "Morphine",
+          "title": "Mark Sandman of Morphine - Interview On His Basses",
+          "artist": "Mark Sandman",
+          "date": "Unknown",
+          "link": "https://www.youtube.com/watch?v=ClQLC2kzkWg",
+          "text": ""
+        }
+      ]
     },
     {
       "title": "Nirvana",
-      "href": "2"
+      "href": "2",
+      "years": [
+        {
+          "band": "Nirvana",
+          "title": "Nirvana interview 1992",
+          "artist": "Kurt Cobain",
+          "date": "1992 #1",
+          "link": "https://www.youtube.com/watch?v=JZygIRyw7ag",
+          "text": ""
+        },
+        {
+          "band": "Nirvana",
+          "title": "Kurt Cobain Feeds Frances Bean During Nirvana Interview From 1992 | MTV News",
+          "artist": "Kurt Cobain",
+          "date": "1992 #2",
+          "link": "https://www.youtube.com/watch?v=iaE4H1aINeQ",
+          "text": ""
+        }
+      ]
     },
     {
       "title": "BadBadNotGood",
-      "href": "3"
+      "href": "3",
+      "years": [
+        {
+          "band": "BadBadNotGood",
+          "title": "GRAMMY Pro Interview with BADBADNOTGOOD at Lollapalooza 2015",
+          "artist": "Kurt Cobain",
+          "date": "2015",
+          "link": "https://www.youtube.com/watch?v=XDsPNt5gMpc",
+          "text": ""
+        }
+      ]
     }
   ]
 }
