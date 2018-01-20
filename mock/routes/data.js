@@ -11,21 +11,6 @@ function filereader(fsRef, path) {
     })
 }
 
-function testGetRequest(req, res) {
-    var servicePromise = filereader(fs, './mock/api/test/get.json');
-
-    servicePromise
-        .then((response) => {
-            console.log("GET", './api/test/get.json');
-            return response;
-        }, (error) => {
-            console.log("GET - ERROR", './api/test/get.json', error);
-        })
-        .then((response) => {
-            res.json(response);
-        });
-}
-
 function testPostRequest(req, res) {
     var servicePromise = filereader(fs, './mock/api/test/post.json');
 
@@ -94,7 +79,6 @@ function getInterviewAll (req, res) {
     var servicePromise = filereader(fs, './mock/api/interview/interview_list.json');
     servicePromise
         .then((response) => {
-            console.log(response);
             return response;
         })
         .then((response) => {
@@ -102,17 +86,6 @@ function getInterviewAll (req, res) {
         });
 }
 
-function getInterview (req, res) {
-    var servicePromise = filereader(fs, './mock/api/interview/'+ req.params.id +'/get.json');
-    servicePromise
-        .then((response) => {
-            console.log(response);
-            return response;
-        })
-        .then((response) => {
-            res.json(response);
-        });
-}
 
 function getPointBlock (req, res) {
     var servicePromise = filereader(fs, './mock/api/point__block/get_point__block.json');
@@ -125,4 +98,4 @@ function getPointBlock (req, res) {
         });
 }
 
-module.exports = { testGetRequest, testPostRequest, getNewsAll, getBandsAll, getCurrBand, getMenu, getInterviewAll, getInterview, getPointBlock };
+module.exports = { testPostRequest, getNewsAll, getBandsAll, getCurrBand, getMenu, getInterviewAll, getPointBlock };

@@ -11,4 +11,8 @@ app.controller("l-interview.controller", function($scope, $interviewsData, $stat
             });
     }
     init();
+    $scope.oneInt = function (data) {
+        $state.data = data;
+        $state.go('interview-one', {params: $state.data});
+    }
 });

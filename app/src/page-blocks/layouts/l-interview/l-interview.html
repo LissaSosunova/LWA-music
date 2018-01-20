@@ -1,11 +1,16 @@
 <div class="interview" ui-sref="interview">
-    <h3>Interviews list</h3>
+    <h3>Last added Interviews</h3>
     <div class="row middle-xs">
         <ul>
             <li ng-repeat="item in interviews">
                 <div class="row around-xs">
-                    <div class="div-int-menu-text int-menu-list col-xs-6 col-md-6 col-lg-6">{{ item.title }}</div>
-                    <interview-list data-list="item.years"></interview-list>
+                    <div class="div-int-menu-text col-xs-6 col-md-6 col-lg-6">{{ item.title }}</div>
+                    <ul>
+                        <li ng-repeat="x in item.years">
+                            <div class="li-interview-prew" ng-click="oneInt(x)"><a href ng-click="oneInt(x)">{{ x.title }}</a></div>
+                            <div class="li-interview-prew-artist">{{ x.artist }}, {{ x.date }}</div>
+                        </li>
+                    </ul>
                 </div>
             </li>
         </ul>

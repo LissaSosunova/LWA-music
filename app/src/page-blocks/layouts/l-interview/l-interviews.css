@@ -4,6 +4,7 @@
 }
 .int-menu-list:hover{
     color: #1167a8;
+    cursor: pointer;
 }
 
 .div-dots-drop-down{
@@ -18,8 +19,14 @@
 }
 
 .div-int-menu-text{
+    font-family: Arial;
+    font-size: 16px;
+    color: #0b0b0a;
+    font-weight: 700;
+    font-style: italic;
     display: inline-block;
     margin: 20px;
+    cursor: hand;
 }
 
 .div-drop-down-block{
@@ -35,7 +42,29 @@
     transition: .2s;
     display: none;
 }
+.div-drop-down-block:hover{
+    background-color: #216477;
+    color: white;
+    cursor: pointer;
+}
 .div-drop-down-block.active {
     display: block;
 }
 
+.li-interview-prew{
+    font-family: Arial;
+    font-size: 14px;
+    color: #216477;
+    font-style: italic;
+}
+.li-interview-prew:hover{
+    color: #771837;
+    font-style: italic;
+    cursor: pointer;
+}
+.li-interview-prew-artist{
+    font-family: Arial;
+    font-size: 12px;
+    color: #313131;
+    font-style: italic;
+}

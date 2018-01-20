@@ -7,16 +7,16 @@
     "angular-ui-router": "^0.4.3"
   },
   "devDependencies": {
-    "angular": "^1.6.6",
-    "browser-sync": "^2.18.13",
+    "angular": "^1.6.8",
+    "browser-sync": "^2.23.5",
     "gulp": "^3.9.1",
     "gulp-build": "^0.5.3",
-    "gulp-clean-css": "^3.9.0",
+    "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
     "gulp-minify": "^2.1.0",
     "gulp-obfuscate": "^0.2.9",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.3",
     "gulp-watch": "^4.3.11",
     "node-static": "^0.7.10"
   },

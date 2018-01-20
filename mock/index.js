@@ -18,9 +18,6 @@ app.use(function (req, res, next) {
 
 app.get("/", (req, res) => res.json({ message: "Hello! Its API!" }));
 
-app.route('/getTest')
-    .get($data.testGetRequest);
-
 app.route('/postTest')
     .post($data.testPostRequest);
 
@@ -41,9 +38,6 @@ app.route('/bands/:name')
 
 app.route('/interview')
     .get($data.getInterviewAll);
-
-app.route('/interview/:id')
-    .get($data.getInterview);
     
 app.route('/point__block')
     .get($data.getPointBlock);
