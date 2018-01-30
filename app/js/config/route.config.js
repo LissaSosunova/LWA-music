@@ -42,7 +42,7 @@ app.config(function($stateProvider, $urlRouterProvider){
                 },
                 "viewB": {
                     templateUrl: 'app/src/page-blocks/layouts/l-interview/l-interview-list.html',
-                    controller: 'l-interview.controller'
+                    controller: 'l-interview-list'
                 },
             },
             params: {
@@ -58,7 +58,7 @@ app.config(function($stateProvider, $urlRouterProvider){
                 },
                 "viewB": {
                     templateUrl: 'app/src/page-blocks/layouts/l-interview/l-interview-list.html',
-                    controller: 'l-interview.controller'
+                    controller: 'l-interview-list'
                 },
             },
             params: {
