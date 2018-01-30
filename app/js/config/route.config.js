@@ -41,9 +41,28 @@ app.config(function($stateProvider, $urlRouterProvider){
                     controller: 'l-interview.controller'
                 },
                 "viewB": {
-                    templateUrl: 'app/src/page-blocks/layouts/l-bands/l-bands-list.html',
-                    controller: 'l-bands-list.controller'
+                    templateUrl: 'app/src/page-blocks/layouts/l-interview/l-interview-list.html',
+                    controller: 'l-interview.controller'
                 },
+            },
+            params: {
+                data: {}
+            }
+        })
+        .state('interview-one', {
+            url: '/interview-one',
+            views: {
+                "viewA": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-interview/l-interview-year.html',
+                    controller: 'l-one-interview.controller'
+                },
+                "viewB": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-interview/l-interview-list.html',
+                    controller: 'l-interview.controller'
+                },
+            },
+            params: {
+                data: {}
             }
         })
         
