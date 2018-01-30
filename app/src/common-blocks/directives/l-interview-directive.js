@@ -9,7 +9,6 @@ app.directive("interviewList", function ($state) {
                 $scope.show = !$scope.show;
             };
             $scope.oneInt = function (data) {
-                console.log(data);
                 $scope.showList();
                 $state.go('interview-one', { data: data });
             }
