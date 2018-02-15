@@ -1,7 +1,9 @@
-app.controller("l-bands-list.controller", function($scope, $flowData, dataBand) {
-
+app.controller("l-video.bands-list.controller", function($scope, $flowData, dataBand){
+    
     $scope.dataBands = {};
-    $scope.dataCurrBand = {};
+    $scope.dataCurrBandVideo = {};
+    $scope.states = {};
+    $scope.states.activeItem = 'item1';
 
     function init() {
         $flowData.req({
@@ -13,20 +15,16 @@ app.controller("l-bands-list.controller", function($scope, $flowData, dataBand) 
     }
     init();
 
-    $scope.states = {};
-    $scope.states.activeItem = '';
-
-    $scope.displayCurrBand = function(item){
+    $scope.displayCurrBandVideo = function(item){
         let key = item.band.toLowerCase();
         $flowData.req({
-            path: 'bands/'+key
+            path: 'video/'+key
         })
-        .then(function renderBand(response){
-            $scope.dataCurrBand = response.data;
-            dataBand.set($scope.dataCurrBand);
+        .then(function (response){
+            $scope.dataCurrBandVideo = response.data;
+            dataBand.set($scope.dataCurrBandVideo);
             dataBand.get();
         })
         $scope.states.activeItem = item.id;
     };
-    
 });

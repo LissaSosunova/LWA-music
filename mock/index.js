@@ -42,6 +42,9 @@ app.route('/interview')
 app.route('/point__block')
     .get($data.getPointBlock);
 
+app.route('/video/:name')
+    .get($data.getCurrBandVideo);
+    
 app.listen(port);
 console.log("Mock server listening on port " + port);
 

@@ -2,7 +2,12 @@
     list-style-type: none; 
     margin-left: 20px;
 }
-.active {
+.currentBand {
     color: #216477;
     font-weight: bold;
+}
+.bands-list:hover {
+    color: #216477;
+    font-weight: bold;
+    cursor: pointer;
 }
