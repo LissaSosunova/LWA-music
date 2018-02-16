@@ -23,5 +23,6 @@
     margin: 20px 0;
 }
 .article-image img {
-    max-height: 300px;
+    max-width: 380px;
+    width: 100%;
   }

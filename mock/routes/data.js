@@ -86,6 +86,17 @@ function getInterviewAll (req, res) {
         });
 }
 
+function getCurrBandVideo (req, res) {
+    var path = './mock/api/video/'+req.params.name+'/get_video.json';
+    var servicePromise = filereader(fs, path);
+    servicePromise
+    .then((response) => {
+        return response;
+    })
+    .then ((response) => {
+        res.json(response);
+    })
+}
 
 function getPointBlock (req, res) {
     var servicePromise = filereader(fs, './mock/api/point__block/get_point__block.json');
@@ -98,4 +109,13 @@ function getPointBlock (req, res) {
         });
 }
 
-module.exports = { testPostRequest, getNewsAll, getBandsAll, getCurrBand, getMenu, getInterviewAll, getPointBlock };
+module.exports = { 
+    testPostRequest, 
+    getNewsAll, 
+    getBandsAll, 
+    getCurrBand, 
+    getMenu, 
+    getInterviewAll, 
+    getPointBlock,
+    getCurrBandVideo
+ };

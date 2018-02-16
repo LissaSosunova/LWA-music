@@ -68,14 +68,30 @@ app.config(function($stateProvider, $urlRouterProvider){
         
         .state('audio', {
             url: '/audio',
-            templateUrl: 'app/src/page-blocks/layouts/l-audio/l-audio.html',
-            controller: 'l-audio.controller'
+            views: {
+                "viewA": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-audio/l-audio.html',
+                    controller: 'l-audio.controller'
+                },
+                "viewB": {
+                    templateUrl: 'app/src/page-blocks/layouts/l-audio/l-audio.bands-list.html',
+                    controller: 'l-audio.bands-list.controller'
+                }
+                }
         })
         
         .state('video', {
             url: '/video',
-            templateUrl: 'app/src/page-blocks/layouts/l-video/l-video.html',
-            controller: 'l-video.controller'
+            views: {
+            "viewA": {
+                templateUrl: 'app/src/page-blocks/layouts/l-video/l-video.html',
+                controller: 'l-video.controller'
+            },
+            "viewB": {
+                templateUrl: 'app/src/page-blocks/layouts/l-video/l-video.bands-list.html',
+                controller: 'l-video.bands-list.controller'
+            }
+            }
         })
 
 });
