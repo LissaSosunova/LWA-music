@@ -1,0 +1,15 @@
+{
+    "audioData":[{
+                "url":"mock/api/audio/nirvana/01-smells_like_teen_spirit.mp3",
+                "title": "Smells Like Teen Spirit"
+                },
+                {
+                "url": "mock/api/audio/nirvana/02-in_bloom.mp3",
+                "title": "In Bloom"
+                },
+                {
+                "url": "mock/api/audio/nirvana/14-the_man_who_sold_the_world.mp3",
+                "title": "The Man Who Sold The World"  
+                }
+                ]
+}

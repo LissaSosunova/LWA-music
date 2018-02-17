@@ -1,0 +1,15 @@
+{
+    "audioData":[{
+                "url":"mock/api/audio/BadBadNotGood/02-fall_in_love.mp3",
+                "title": "Fall in Love"
+                },
+                {
+                "url": "mock/api/audio/BadBadNotGood/06-hedron.mp3",
+                "title": "Hedron"
+                },
+                {
+                "url": "mock/api/audio/BadBadNotGood/08-nightmare.mp3",
+                "title": "Nightmare"  
+                }
+                ]
+}

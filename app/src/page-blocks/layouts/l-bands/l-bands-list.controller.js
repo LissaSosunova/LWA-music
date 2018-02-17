@@ -2,7 +2,7 @@ app.controller("l-bands-list.controller", function($scope, $flowData, dataBand) 
 
     $scope.dataBands = {};
     $scope.dataCurrBand = {};
-
+    
     function init() {
         $flowData.req({
             path: 'bands'
@@ -14,7 +14,7 @@ app.controller("l-bands-list.controller", function($scope, $flowData, dataBand) 
     init();
 
     $scope.states = {};
-    $scope.states.activeItem = '';
+    $scope.states.activeItem = 'item1';
 
     $scope.displayCurrBand = function(item){
         let key = item.band.toLowerCase();

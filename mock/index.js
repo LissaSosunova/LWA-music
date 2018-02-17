@@ -21,9 +21,6 @@ app.get("/", (req, res) => res.json({ message: "Hello! Its API!" }));
 app.route('/postTest')
     .post($data.testPostRequest);
 
-// app.route('/user/:id/cart')
-//     .get($data.getUserCartById);
-
 app.route('/news')
     .get($data.getNewsAll);
 
@@ -44,6 +41,9 @@ app.route('/point__block')
 
 app.route('/video/:name')
     .get($data.getCurrBandVideo);
+
+app.route('/audio/:name')
+    .get($data.getCurrBandAudio);
     
 app.listen(port);
 console.log("Mock server listening on port " + port);
