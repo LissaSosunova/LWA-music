@@ -1,0 +1,15 @@
+{
+    "audioData":[{
+                "url":"mock/api/audio/morphine/01-honey_white.mp3",
+                "title": "Honey White"
+                },
+                {
+                "url": "mock/api/audio/morphine/02-buena.mp3",
+                "title": "Buena"
+                },
+                {
+                "url": "mock/api/audio/morphine/09-cure_for_pain.mp3",
+                "title": "Cure for Pain"  
+                }
+                ]
+}

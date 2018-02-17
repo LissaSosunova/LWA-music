@@ -54,7 +54,6 @@ function getCurrBand (req, res) {
     var path = './mock/api/bands/'+ req.params.name +'/get.json';
     var servicePromise = filereader(fs, path);
 
-    console.log('GET', path)
     servicePromise
     .then((response) => {
         return response;
@@ -98,6 +97,18 @@ function getCurrBandVideo (req, res) {
     })
 }
 
+function getCurrBandAudio (req, res){
+    var path = './mock/api/audio/'+req.params.name+'/audio.json';
+    var servicePromise = filereader(fs, path);
+    servicePromise
+    .then((response) => {
+        return response;
+    })
+    .then ((response) => {
+        res.json(response);
+    })
+}
+
 function getPointBlock (req, res) {
     var servicePromise = filereader(fs, './mock/api/point__block/get_point__block.json');
     servicePromise
@@ -117,5 +128,6 @@ module.exports = {
     getMenu, 
     getInterviewAll, 
     getPointBlock,
-    getCurrBandVideo
+    getCurrBandVideo,
+    getCurrBandAudio
  };

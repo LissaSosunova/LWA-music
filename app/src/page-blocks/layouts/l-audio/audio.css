@@ -1,0 +1,4 @@
+.audio-container audio {
+    cursor: pointer;
+    max-width: 100%;
+}

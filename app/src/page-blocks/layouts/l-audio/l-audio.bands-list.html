@@ -1,1 +1,11 @@
-<b>asdfggh</b>
+<ul ng-repeat = "x in dataBands">
+
+    <li ng-click="displayCurrBandAudio(x)"
+    ng-class="{'currentBand': x.id == states.activeItem}"
+    class="bands-list">
+        <span>
+            {{ x.band }}
+        </span>
+    </li>
+    
+</ul>

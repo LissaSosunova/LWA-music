@@ -1,1 +1,6 @@
-<h1>AUDIO PAGE coming soon ...</h1>
+<div ng-repeat = "x in dataCurrBandAudio.audioData" class="audio-container">
+    <div class="song-title">{{x.title}}</div>
+    <audio src="{{ x.url }}" type="audio/mpeg" controls >
+    </audio>
+</div>
+   
