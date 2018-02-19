@@ -120,6 +120,18 @@ function getPointBlock (req, res) {
         });
 }
 
+function getFilter (req, res) {
+    var path = './mock/api/filter/filter.json';
+    var servicePromise = filereader(fs, path);
+    servicePromise
+    .then((response) => {
+        return response;
+    })
+    .then((response) => {
+        res.json(response);
+    })
+}
+
 module.exports = { 
     testPostRequest, 
     getNewsAll, 
@@ -129,5 +141,6 @@ module.exports = {
     getInterviewAll, 
     getPointBlock,
     getCurrBandVideo,
-    getCurrBandAudio
+    getCurrBandAudio,
+    getFilter
  };

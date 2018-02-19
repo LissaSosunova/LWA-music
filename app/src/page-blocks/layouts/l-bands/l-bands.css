@@ -32,7 +32,6 @@
 .block2 {
     width: 30%;
 }
-
 /* media queries */
 @media only screen and (max-width: 576px) {
 	.block2 {

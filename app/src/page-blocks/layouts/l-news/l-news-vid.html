@@ -1,11 +1,9 @@
 <section>
-
     <h2>FRESH VIDEOS</h2>
-    <article ng-repeat = "x in dataNews">
+    <article ng-repeat = "x in root.dataNewsRender">
         <p class="post-data"><b>{{ x.video.title }}</b> by {{ x.band }}</p>
         <div class="player">
             <iframe width="100%" height="150" ng-src="{{ x.video.link | trustUrl }}" frameborder="0" allowfullscreen></iframe>
         </div>
     </article>
-    
 </section>

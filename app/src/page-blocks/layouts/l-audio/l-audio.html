@@ -1,4 +1,4 @@
-<div ng-repeat = "x in dataCurrBandAudio.audioData" class="audio-container">
+<div ng-repeat = "x in dataCurrBandAudio.audioData | filter:search" class="audio-container">
     <div class="song-title">{{x.title}}</div>
     <audio src="{{ x.url }}" type="audio/mpeg" controls >
     </audio>

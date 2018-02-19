@@ -27,6 +27,7 @@ nav a {
 }
 #primary-nav .underlined:hover {
   border-bottom-color: white;
+  cursor: pointer;
 }
 #logo-menu {
   border-bottom: 1px solid #ccc;
@@ -133,6 +134,7 @@ nav .dark-header {
 .menu-news li {
   display: table-cell;
   position: relative;
+  padding: 5px;
 }
 #primary-nav li:after {
   content: '';

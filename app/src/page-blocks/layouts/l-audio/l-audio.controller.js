@@ -1,5 +1,6 @@
-app.controller("l-audio.controller", function($scope, dataBand, $flowData){
-		
+app.controller("l-audio.controller", function($scope, transferService, $flowData){
+    $scope.root = $scope.root || {};
+    $scope.states.activeStyle = 'All styles';	
     displayDefaultBand = function () {
         let key = "Morphine";
         $flowData.req({
@@ -11,7 +12,7 @@ app.controller("l-audio.controller", function($scope, dataBand, $flowData){
     };
     displayDefaultBand();
     $scope.$watch(function(){
-        return dataBand.get();
+        return transferService.get('audio');
     },
         function (newVal) {
             $scope.dataCurrBandAudio = newVal;

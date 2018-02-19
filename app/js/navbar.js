@@ -90,7 +90,6 @@ window.onload = function(){
     }
     defaultUnderline (mainMenuUnderlined, 'underlined');
     underline(mainMenuUnderlined, 'underlined');
-    underline(menuNewsUnderlined, 'active');
 
     
 

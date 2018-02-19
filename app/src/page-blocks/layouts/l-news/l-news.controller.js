@@ -1,22 +1,46 @@
-app.controller("l-news.controller", function($scope, $flowData) {
-    $scope.dataNews = {};
+app.controller("l-news.controller", function($scope, $flowData, transferService) {
+    
+    $scope.root = $scope.root || {};
+    $scope.root.dataNews = [];
     $scope.temp = {};
+    $scope.root.dataNewsRender = [];
+    $scope.states.activeStyle = 'All styles';
+
     function init() {
         $flowData.req({
             path: 'news'
         })
             .then(function success(response) {
-                $scope.dataNews = response.data.dataNews;
+                $scope.root.dataNews = response.data.dataNews;
+                $scope.root.dataNewsRender = $scope.root.dataNews;
             });
     }
-
+    
     init();
+    
+    
+    $scope.root.newsRender = function (style) {
+        $scope.root.dataNewsRender = [];
+        $scope.root.dataNews.forEach(function(item, i){
+                if (item.style.toLowerCase() == style.toLowerCase()) {
+                    $scope.root.dataNewsRender.push(item);
+                }
+                else if (style == "All styles") {
+                    $scope.root.dataNewsRender = $scope.root.dataNews;
+                }
+                transferService.set({name: 'currRender', data: $scope.root.dataNewsRender})
+            });
+    }  
+    $scope.root.filterHandler = function (param) {
+        $scope.states.activeStyle = param.title;
+        $scope.style = param.title;
+        $scope.root.newsRender($scope.style);
+    } 
 	$scope.showNews = function(item, arr, temp) {
-                newArr = [];
+                newArr = []; // обратить внимание
                 arr.forEach((el, i) => {
                     newArr[i] = arr[i]
                 });
-                console.log(temp);
                 arr.splice(0, newArr.length, newArr[newArr.indexOf(item)]);
                 var blocks = document.querySelectorAll('.full-width');
                 var showAllBtn = document.querySelectorAll('.showAll');
