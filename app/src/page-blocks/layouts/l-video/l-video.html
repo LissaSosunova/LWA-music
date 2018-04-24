@@ -1,4 +1,4 @@
-<div class="player" ng-repeat = "x in dataCurrBandVideo.dataVideo.url">
+<div class="player" ng-repeat = "x in dataCurrBandVideo.dataVideo.url | filter:search">
     <iframe ng-src="{{ x | trustUrl }}" 
     allowfullscreen
     height="350"

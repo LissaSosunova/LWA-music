@@ -1,0 +1,6 @@
+<li ng-repeat="item in dataFilter" 
+class="underlined" 
+ng-click="root.filterHandler(item)"
+ng-class="{'active': item.title == states.activeStyle}">
+    {{item.title}}
+</li>

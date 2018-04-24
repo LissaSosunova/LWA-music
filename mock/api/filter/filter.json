@@ -1,0 +1,15 @@
+{
+    "filterItems":[
+        {"title": "All styles"},
+        {"title": "Ambient"},
+        {"title": "Blues"},
+        {"title": "Classical"},
+        {"title": "Electronica"},
+        {"title": "Folk"},
+        {"title": "Funk"},
+        {"title": "Hip Hop"},
+        {"title": "Jazz"},
+        {"title": "Raggae"},
+        {"title": "Rock"}
+    ]
+} 

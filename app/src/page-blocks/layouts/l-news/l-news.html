@@ -1,4 +1,4 @@
-<div ng-repeat = "x in dataNews" class="row view-block">
+<div ng-repeat = "x in root.dataNewsRender | filter:search" class="row view-block">
 
 	<section class="news_view">
 		<article class="full-width col span_5_of_12">
@@ -6,8 +6,8 @@
 				<h2>{{ x.title }}</h2>
 				<p>{{ x.text }}</p>
 			</a>		 				
-			<button class="show" ng-click="showNews(x, dataNews, temp)">Show more</button>
-			<button class="showAll" ng-click="showAll(x, dataNews, temp)">Back</button>
+			<button class="show" ng-click="showNews(x, root.dataNewsRender, temp)">Show more</button>
+			<button class="showAll" ng-click="showAll(x, root.dataNewsRender, temp)">Back</button>
 		</article>
 		<div class= "col span_7_of_12 article-image">
 			<img src="{{ x.picture }}">

@@ -2,7 +2,7 @@
     <h3>Interviews list</h3>
     <div class="row middle-xs">
         <ul>
-            <li ng-repeat="item in interviews">
+            <li ng-repeat="item in root.bandListRender | filter:search">
                 <div class="row around-xs">
                     <div class="div-int-menu-text int-menu-list col-xs-6 col-md-6 col-lg-6">{{ item.title }}</div>
                     <interview-list data-list="item.years"></interview-list>

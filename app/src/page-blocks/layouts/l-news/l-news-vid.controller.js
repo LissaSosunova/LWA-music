@@ -8,10 +8,9 @@ app.controller("l-news-vid.controller", function($scope, $flowData) {
             path: 'news'
         })
             .then(function success(response) {
-                $scope.dataNews = response.data.dataNews;
+                $scope.root.dataNews = response.data.dataNews;
             });
     }
 
     init();
-	
 });

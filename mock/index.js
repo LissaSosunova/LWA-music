@@ -44,6 +44,9 @@ app.route('/video/:name')
 
 app.route('/audio/:name')
     .get($data.getCurrBandAudio);
+
+app.route('/filter')
+    .get($data.getFilter);    
     
 app.listen(port);
 console.log("Mock server listening on port " + port);

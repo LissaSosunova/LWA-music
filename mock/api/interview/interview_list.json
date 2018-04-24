@@ -3,6 +3,7 @@
     {
       "title": "Morphine",
       "href": "1",
+      "style": "rock",
       "years": [
         {
           "band": "Morphine",
@@ -33,6 +34,7 @@
     {
       "title": "Nirvana",
       "href": "2",
+      "style": "rock",
       "years": [
         {
           "band": "Nirvana",
@@ -55,6 +57,7 @@
     {
       "title": "BadBadNotGood",
       "href": "3",
+      "style": "jazz",
       "years": [
         {
           "band": "BadBadNotGood",

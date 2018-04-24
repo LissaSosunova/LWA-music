@@ -1,26 +1,33 @@
-app.controller("l-bands.controller", function($scope, dataBand, $flowData) {
-
-    $scope.dataBands = {};
+app.controller("l-bands.controller", function($scope, transferService, $flowData) {
+    $scope.root = $scope.root || {};
+    
 
     displayDefaultBand = function () {
-        let key = "Morphine";
+        let key;
+        if (!transferService.get('currBandListRender')) {
+            key = "Morphine";
+        }
+        else {
+            key = transferService.get('currBandListRender')[0].band;
+        }
+        
         $flowData.req({
             path: 'bands/'+key
         })
             .then(function (response){
-                $scope.dataCurrBand = response.data;
+                $scope.root.dataCurrBand = response.data;
             })
     };
    
     $scope.$watch(function(){
-        return dataBand.get();
+        return transferService.get('band');
     },
         function (newVal) {
-            $scope.dataCurrBand = newVal; 
+            $scope.root.dataCurrBand = newVal; 
       });
     
    displayDefaultBand();
-   
+    
 
     $scope.states = {};
     $scope.states.activeItem = '';

@@ -1,5 +1,7 @@
-app.controller("l-video.controller", function($scope, dataBand, $flowData){
-    
+app.controller("l-video.controller", function($scope, transferService, $flowData){
+    $scope.root = $scope.root || {};
+    $scope.states.activeStyle = 'All styles';
+
     displayDefaultBandVideo = function () {
         let key = "Morphine";
         $flowData.req({
@@ -12,11 +14,11 @@ app.controller("l-video.controller", function($scope, dataBand, $flowData){
     displayDefaultBandVideo();
 
     $scope.$watch(function(){
-        return dataBand.get();
+        return transferService.get('video');
     },
         function (newVal) {
             $scope.dataCurrBandVideo = newVal;
       });
-     
+      
 	
 });
