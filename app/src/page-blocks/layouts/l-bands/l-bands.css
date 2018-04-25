@@ -1,4 +1,9 @@
+@font-face { 
+	font-family: 'Oswald'; 
+	src: url('../fonts/Oswald/Oswald-Regular.woff') format('woff'); 
+}
 .bands {
+	font-family: 'Oswald', sans-serif;
 	font-size: 16px;
 }
 .center_vertical {
@@ -33,13 +38,28 @@
     width: 30%;
 }
 /* media queries */
+@media only screen and (max-width: 992px) {
+	.span_2_of_12 {
+		width: 25%;
+	}
+	.slider__img {
+		max-width: 500px;
+	}
+}
 @media only screen and (max-width: 576px) {
-	.block2 {
-		width: 70%;
+	.span_10_of_12 {
+		width: 95%;
+	}
+	.span_2_of_12 {
+		width: 45%;
+	}
+	.slider__img {
+		max-width: 100%;
+		padding: 0 1.6%;
 	}
 }
 @media only screen and (max-width: 450px) {
-	.block2 {
+	.span_2_of_12 {
 		width: 100%;
 	}
 }

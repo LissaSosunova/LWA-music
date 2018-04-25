@@ -37,10 +37,11 @@ app.controller("l-news.controller", function($scope, $flowData, transferService)
         $scope.root.newsRender($scope.style);
     } 
 	$scope.showNews = function(item, arr, temp) {
-                newArr = []; // обратить внимание
+                var newArr = [];
                 arr.forEach((el, i) => {
                     newArr[i] = arr[i]
                 });
+                transferService.set({name: 'newArr', data: newArr});
                 arr.splice(0, newArr.length, newArr[newArr.indexOf(item)]);
                 var blocks = document.querySelectorAll('.full-width');
                 var showAllBtn = document.querySelectorAll('.showAll');
@@ -56,8 +57,10 @@ app.controller("l-news.controller", function($scope, $flowData, transferService)
                 temp.curBlock.classList.add('full-width');
                 temp.curButton.style.display = "block";
                 temp.curShowAllBtn.style.display = "none";
+                var newArr = transferService.get('newArr');
                 newArr.forEach((el, i) =>{
                     arr[i] = newArr[i]
                 });
             }
+         
 });

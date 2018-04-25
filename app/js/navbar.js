@@ -30,26 +30,31 @@ window.onload = function(){
 
 
 
-    hmbgMenu = document.querySelector('.hmbg-logo');
-    mainMenu = document.querySelector('.main-menu');
-    hmbgNews = document.querySelector('.hmbg-news');
-    menuNews = document.querySelector('.menu-news');
-    input = document.querySelector('.search-container input');
-    mainMenuUnderlined = document.querySelectorAll('.main-menu li a');
-    menuNewsUnderlined = document.querySelectorAll('.menu-news .underlined');
+    var hmbgMenu = document.querySelector('.hmbg-logo');
+    var mainMenu = document.querySelector('.main-menu');
+    var hmbgNews = document.querySelector('.hmbg-news');
+    var menuNews = document.querySelector('.menu-news');
+    var input = document.querySelector('.search-container input');
+    var mainMenuUnderlined = document.querySelectorAll('.main-menu li a');
+    var menuNewsUnderlined = document.querySelectorAll('.menu-news .underlined');
     function clickMenu (hmbgClick, menu) {
         hmbgClick.addEventListener('click', function(event){
             menu.classList.toggle('is-active');
             event.stopPropagation();
+            if (menuNews.classList.contains('is-active') && hmbgClick == hmbgMenu) {
+                menuNews.classList.remove('is-active');
+            }
         })
     }
     function hideMenuMobile (menu) {
         menu.addEventListener('mouseover', function(){
-            menu.addEventListener('click', function(){
-                menu.classList.remove('is-active');
-            })
+            menu.addEventListener('click', clickMenuMobile)
         });
     };
+    function clickMenuMobile() {
+        mainMenu.classList.remove('is-active');
+        menuNews.classList.remove('is-active');
+    }
     function focusInput (input) {
         input.addEventListener('click', function(event){
             event.stopPropagation();
@@ -57,12 +62,14 @@ window.onload = function(){
     }
     function hideMenuClickDoc (menu) {
         menu.addEventListener('mouseout', function(e){
-            document.addEventListener('click', function(){
-                if (menu.classList.contains('is-active')) {
-                    menu.classList.remove('is-active');
-                }
-            })
+            document.addEventListener('click', docClickHideMenu)
         })
+    }
+    function docClickHideMenu () {
+        if (mainMenu.classList.contains('is-active') || menuNews.classList.contains('is-active')) {
+            mainMenu.classList.remove('is-active');
+            menuNews.classList.remove('is-active');
+        }
     }
     clickMenu(hmbgMenu, mainMenu);
     clickMenu(hmbgNews, menuNews);
@@ -90,7 +97,4 @@ window.onload = function(){
     }
     defaultUnderline (mainMenuUnderlined, 'underlined');
     underline(mainMenuUnderlined, 'underlined');
-
-    
-
 };

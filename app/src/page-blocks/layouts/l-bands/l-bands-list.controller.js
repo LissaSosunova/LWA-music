@@ -5,6 +5,9 @@ app.controller("l-bands-list.controller", function($scope, $flowData, transferSe
     $scope.root.bandListRender = [];
     $scope.states.activeStyle = 'All styles';
     $scope.states.activeItem = 'item1';
+
+    var sidebarHiderItem = document.querySelector('.sidebar-hider span');
+    var sidebar = document.querySelector('.sidebar');
     
     function init() {
         $flowData.req({
@@ -17,11 +20,10 @@ app.controller("l-bands-list.controller", function($scope, $flowData, transferSe
     }
     init();
 
-    
-   
-
     $scope.displayCurrBand = function(item){
         let key = item.band.toLowerCase();
+        sidebar.classList.remove('sidebar-visible');
+        sidebar.classList.add('sidebar-hidden');
         $flowData.req({
             path: 'bands/'+key
         })
@@ -49,4 +51,17 @@ app.controller("l-bands-list.controller", function($scope, $flowData, transferSe
         $scope.root.bandsListRender($scope.style);
     }
     
+    sidebarHiderItem.addEventListener('click', sidebarHandler);
+    function sidebarHandler (event) {
+        sidebar.classList.toggle('sidebar-visible');
+        sidebar.classList.toggle('sidebar-hidden');
+        sidebarHiderItem.classList.toggle('icon-indent-left');
+        sidebarHiderItem.classList.toggle('icon-indent-right');
+        event.stopPropagation();  
+    }
+    document.addEventListener('click', docClickHandler);
+    function docClickHandler () {
+        sidebar.classList.remove('sidebar-visible');
+        sidebar.classList.add('sidebar-hidden');
+    }
 });
