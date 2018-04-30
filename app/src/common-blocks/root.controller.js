@@ -26,6 +26,7 @@ app.controller("root.controller", function($scope, $flowData, $timeout, transfer
         })
         .then(function (response) {
             $scope.dataMenu = response.data.dataItems;
+
         });
         $flowData.req({
             path: 'point__block'
@@ -39,5 +40,4 @@ app.controller("root.controller", function($scope, $flowData, $timeout, transfer
         .then (function(response){
             $scope.dataFilter = response.data.filterItems;
         });   
-          
 });

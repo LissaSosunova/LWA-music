@@ -4,6 +4,9 @@ app.controller("l-interview-list", function($scope, $interviewsData, $state ){
     $scope.interviews = {};
     $scope.show = false;
 
+    var sidebarHiderItem = document.querySelector('.sidebar-hider span');
+    var sidebar = document.querySelector('.sidebar');
+
     function init() {
         $interviewsData
             .interviewsList()
@@ -32,4 +35,22 @@ app.controller("l-interview-list", function($scope, $interviewsData, $state ){
     $scope.oneInt = function (data) {
         $state.go('interview-one', { data: data });
     };
+    
+    sidebarHiderItem.addEventListener('click', sidebarHandler);
+    function sidebarHandler (event) {
+        sidebar.classList.toggle('sidebar-visible');
+        sidebar.classList.toggle('sidebar-hidden');
+        sidebarHiderItem.classList.toggle('icon-indent-left');
+        sidebarHiderItem.classList.toggle('icon-indent-right');
+        event.stopPropagation();  
+    }
+    sidebar.addEventListener('click', sidebarClick);
+    function sidebarClick (event) {
+        event.stopPropagation();
+    }
+    document.addEventListener('click', docClickHandler);
+    function docClickHandler () {
+        sidebar.classList.remove('sidebar-visible');
+        sidebar.classList.add('sidebar-hidden');
+    }
 });

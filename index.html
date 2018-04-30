@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music News</title>
-    <link rel="stylesheet" type="text/css" href="bin/css/main.css">
-    <script src="bin/vendor/bundle.js"></script>
-    <script src="bin/js/main.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Music News</title>
+      <link rel="stylesheet" type="text/css" href="bin/css/main.css">
+      <script src="bin/vendor/bundle.js"></script>
+      <script src="bin/js/main.js"></script>
+  </head>
 
-<body ng-controller="root.controller">
+  <body ng-controller="root.controller">
 
     <nav>
       <div id="logo-menu">
@@ -17,7 +17,7 @@
           <div class="logo col span_4_of_12">
             <a href="#">MusicNewsLogo</a>
           </div>
-          <div class="hmbg-logo icon-menu-outline"></div>
+          <div class="hmbg-logo icon-menu-outline col span_10_of_12"></div>
           <ul class="col span_6_of_12 main-menu" menu-block="dataMenu"></ul>
           <div class="search col span_2_of_12">
             <div class="search-container">
@@ -47,11 +47,11 @@
 
     <main>
         <div class="content fw row flex">
-            
-            <div ui-view="viewA" class="col span_9_of_12"></div>	
-            <div ui-view="viewB" class="sidebar col span_3_of_12"></div>	
-                          
+          <div class="sidebar-hider"><span class="icon-indent-left"></span></div>
+          <div ui-view="viewA" class="col span_9_of_12"></div>	
+          <div ui-view="viewB" class="sidebar sidebar-hidden col span_3_of_12"></div>                 
         </div>
-    </main>	
-</body>
+    </main>
+
+  </body>
 </html>

@@ -116,56 +116,5 @@
 	.span_1_of_12 {
 		width: 100%; 
 	}
-	div.logo {
-		border: none;
-	}
-	.hmbg-logo, .hmbg-news {
-		display: block;
-		cursor: pointer;
-		width: 16px;
-	}
-	.main-menu, ul.menu-news {
-		display: none;
-	}
-	.main-menu.is-active {
-        display: block;
-        background-color: #2d303a;
-        margin-top: 0;
-		width: 250px;
-		opacity: 0.95;
-	}
-	.menu-news.is-active{
-		display: block;
-        background-color: #216477;
-        margin-top: 0;
-		width: 250px;
-		opacity: 0.95;
-	}
-	.main-menu.is-active li, .menu-news.is-active li {
-		display: block;
-	}
-	.main-menu {
-		position: absolute;
-		top: 100%;
-		width: 50%;
-		z-index: 3;
-		margin-left: 0;
-	}
-	.menu-news {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		z-index: 3;
-
-	}
-	nav .main-menu a {
-		text-align: left;
-		border-bottom: 4px solid transparent;
-	  }
-	  .main-menu li.search{
-		border-right: 0;
-	  }
-	.player iframe {
-		width: 300px;
-	  }
+	
 }

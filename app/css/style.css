@@ -2,11 +2,13 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 a {
   color: #216477;
   text-decoration: none;
 }
-
 .fw {
     width: 1150px;
     max-width: 90%;
@@ -69,7 +71,7 @@ ul {
   box-sizing: border-box;
 }
 .search-container {
-  margin: 8px 0;
+  margin-bottom: 8px;
   height: 24px;
   background: #e4e4e4;
 }
@@ -135,6 +137,8 @@ nav .dark-header {
   display: table-cell;
   position: relative;
   padding: 5px;
+  width: 9%;
+  text-align: center;
 }
 #primary-nav li:after {
   content: '';
@@ -166,7 +170,7 @@ nav .dark-header {
   padding: 8px 12px;
   max-height: 16px;
 }
-#primary-nav .active {
+.active {
   border-bottom-color: white;
 }
 
@@ -175,6 +179,7 @@ main {
 }
 main .content {
   position: relative;
+  overflow: hidden;
 }
 main .sidebar {
   box-sizing: border-box;
@@ -192,14 +197,12 @@ main article p {
   line-height: 1.2em;
   font-size: 0.9em;
 }
-
-
-
+.sidebar-hider {
+  display: none;
+}
 .sidebar {
   border-left: 1px solid #eee;
-}
-iframe {
-  width: 100%;
+  margin-left: 0;
 }
 .sidebar h2 {
   margin-top: 0;
@@ -244,4 +247,80 @@ iframe {
 .flex {
 	display: flex;
 	flex-wrap: wrap;
+}
+@media only screen and (max-width: 975px) {
+  div.logo {
+		border: none;
+	}
+	.hmbg-logo, .hmbg-news {
+		display: block;
+		cursor: pointer;
+		width: 16px;
+  }
+  .hmbg-news {
+    margin-left: 1%;
+  }
+	.main-menu, ul.menu-news {
+		display: none;
+	}
+	.main-menu.is-active {
+    display: block;
+    background-color: #2d303a;
+    margin-top: 0;
+		width: 250px;
+		opacity: 0.95;
+	}
+	.menu-news.is-active{
+		display: block;
+    background-color: #216477;
+    margin-top: 0;
+		width: 250px;
+		opacity: 0.95;
+	}
+	.main-menu.is-active li, .menu-news.is-active li {
+		display: block;
+	}
+	.main-menu {
+		position: absolute;
+		top: 100%;
+		width: 50%;
+		z-index: 3;
+		margin-left: 0;
+	}
+	.menu-news {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 3;
+	}
+	ul.menu-news li {
+		width: 92%;
+		text-align: left;
+	  }
+	nav .main-menu a {
+		text-align: left;
+	  }
+	.sidebar {
+		position: absolute;
+		top: 50px;
+		width: 50%;
+		min-width: 270px;
+		background-color: #2d303a;
+		right: 0;
+	}
+	.sidebar-hidden {
+    margin-right: -100%;
+    transition: 1s;
+	}
+	.sidebar-visible {
+    margin-right: 0;
+    transition: 1s;
+  }
+  .sidebar-hider {
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: right;
+  }
 }

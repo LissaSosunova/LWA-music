@@ -13,4 +13,14 @@ app.controller("l-news-vid.controller", function($scope, $flowData) {
     }
 
     init();
+    
+    var sidebarHiderItem = document.querySelector('.sidebar-hider span');
+    var sidebar = document.querySelector('.sidebar');
+    sidebarHiderItem.addEventListener('click', sidebarHandler);
+    function sidebarHandler () {
+        sidebar.classList.toggle('sidebar-visible');
+        sidebar.classList.toggle('sidebar-hidden');
+        sidebarHiderItem.classList.toggle('icon-indent-left');
+        sidebarHiderItem.classList.toggle('icon-indent-right');  
+    }   
 });
