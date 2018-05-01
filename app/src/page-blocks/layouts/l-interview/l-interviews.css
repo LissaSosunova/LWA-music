@@ -68,3 +68,7 @@
     color: #313131;
     font-style: italic;
 }
+.back-btn {
+    font-size: 20px;
+    cursor: pointer;
+}

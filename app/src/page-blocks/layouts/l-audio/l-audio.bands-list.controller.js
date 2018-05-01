@@ -50,8 +50,7 @@ app.controller("l-audio.bands-list.controller", function($scope, $flowData, tran
         $scope.root.bandsListRender($scope.style);
     } 
     
-    sidebarHiderItem.addEventListener('click', sidebarHandler);
-    function sidebarHandler (event) {
+    $scope.root.sidebarHandler = function (event) {
         sidebar.classList.toggle('sidebar-visible');
         sidebar.classList.toggle('sidebar-hidden');
         sidebarHiderItem.classList.toggle('icon-indent-left');

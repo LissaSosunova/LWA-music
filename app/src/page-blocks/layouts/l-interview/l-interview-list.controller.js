@@ -36,16 +36,14 @@ app.controller("l-interview-list", function($scope, $interviewsData, $state ){
         $state.go('interview-one', { data: data });
     };
     
-    sidebarHiderItem.addEventListener('click', sidebarHandler);
-    function sidebarHandler (event) {
+    $scope.root.sidebarHandler = function (event) {
         sidebar.classList.toggle('sidebar-visible');
         sidebar.classList.toggle('sidebar-hidden');
         sidebarHiderItem.classList.toggle('icon-indent-left');
         sidebarHiderItem.classList.toggle('icon-indent-right');
         event.stopPropagation();  
     }
-    sidebar.addEventListener('click', sidebarClick);
-    function sidebarClick (event) {
+    $scope.root.sidebarClick = function(event) {
         event.stopPropagation();
     }
     document.addEventListener('click', docClickHandler);

@@ -47,9 +47,12 @@
 
     <main>
         <div class="content fw row flex">
-          <div class="sidebar-hider"><span class="icon-indent-left"></span></div>
+          <div class="sidebar-hider"><span class="icon-indent-left" ng-click="root.sidebarHandler($event)"></span></div>
           <div ui-view="viewA" class="col span_9_of_12"></div>	
-          <div ui-view="viewB" class="sidebar sidebar-hidden col span_3_of_12"></div>                 
+          <div ui-view="viewB"
+          class="sidebar sidebar-hidden col span_3_of_12"
+          ng-click="root.sidebarClick($event)">
+          </div>                 
         </div>
     </main>
 

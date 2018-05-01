@@ -71,7 +71,7 @@ ul {
   box-sizing: border-box;
 }
 .search-container {
-  margin-bottom: 8px;
+  margin: 8px 0;
   height: 24px;
   background: #e4e4e4;
 }
@@ -216,30 +216,6 @@ main article p {
 }
 .sidebar article a:hover h3 {
   color: #1167a8;
-}
-.sidebar .image {
-  position: relative;
-  margin-right: 10px;
-  float: left;
-}
-.sidebar .image .time {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 6px 8px 6px 20px;
-  background: white;
-  font-size: 0.8em;
-}
-.sidebar .image .time:before {
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 7px;
-  width: 0;
-  height: 0;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-left: 10px solid black;
 }
 .post-data {
 	font-size: 0.85em;
