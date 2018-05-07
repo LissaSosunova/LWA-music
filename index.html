@@ -11,7 +11,7 @@
 
   <body ng-controller="root.controller">
 
-    <nav>
+    <nav style="position: absolute; top: 0">
       <div id="logo-menu">
         <div class="fw row">
           <div class="logo col span_4_of_12">
@@ -47,9 +47,15 @@
 
     <main>
         <div class="content fw row flex">
-          <div class="sidebar-hider"><span class="icon-indent-left"></span></div>
+          <div class="sidebar-hider">
+            <span class="icon-indent-left" ng-click="root.sidebarHandler($event)"></span>
+          </div>
           <div ui-view="viewA" class="col span_9_of_12"></div>	
-          <div ui-view="viewB" class="sidebar sidebar-hidden col span_3_of_12"></div>                 
+          <div ui-view="viewB"
+          class="sidebar sidebar-hidden"
+          ng-click="root.sidebarClick($event)"
+          style="position: absolute; right: 0;">
+          </div>                 
         </div>
     </main>
 

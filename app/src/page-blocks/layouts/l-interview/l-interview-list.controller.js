@@ -1,4 +1,4 @@
-app.controller("l-interview-list", function($scope, $interviewsData, $state ){
+app.controller("l-interview-list", function($scope, $interviewsData, $state, $timeout){
     $scope.root = $scope.root || {};
     $scope.root.bandListRender = [];
     $scope.interviews = {};
@@ -13,6 +13,15 @@ app.controller("l-interview-list", function($scope, $interviewsData, $state ){
             .then(function success(response) {
                 $scope.interviews = response.data.list;
                 $scope.root.bandListRender = $scope.interviews;
+                $timeout(function(){
+                    $scope.root.sidebar = document.querySelector('.sidebar');
+                    $scope.root.sidebarHeight = $scope.root.sidebar.clientHeight;
+                    window.onscroll = function () {
+                        $scope.root.floatHeader();
+                        $scope.root.floatSidebar($scope.root.sidebarHeight, $scope.root.sidebar);
+                        $scope.root.floatSidebarHider($scope.root.sidebarHeight);
+                    } 
+                }) 
             });
     }
     init();
@@ -36,16 +45,14 @@ app.controller("l-interview-list", function($scope, $interviewsData, $state ){
         $state.go('interview-one', { data: data });
     };
     
-    sidebarHiderItem.addEventListener('click', sidebarHandler);
-    function sidebarHandler (event) {
+    $scope.root.sidebarHandler = function (event) {
         sidebar.classList.toggle('sidebar-visible');
         sidebar.classList.toggle('sidebar-hidden');
         sidebarHiderItem.classList.toggle('icon-indent-left');
         sidebarHiderItem.classList.toggle('icon-indent-right');
         event.stopPropagation();  
     }
-    sidebar.addEventListener('click', sidebarClick);
-    function sidebarClick (event) {
+    $scope.root.sidebarClick = function(event) {
         event.stopPropagation();
     }
     document.addEventListener('click', docClickHandler);
