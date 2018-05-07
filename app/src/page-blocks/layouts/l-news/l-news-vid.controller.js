@@ -13,7 +13,9 @@ app.controller("l-news-vid.controller", function($scope, $flowData) {
     }
 
     init();
-    
+    window.onscroll = function () {
+        $scope.root.floatHeader();
+    } 
     var sidebarHiderItem = document.querySelector('.sidebar-hider span');
     var sidebar = document.querySelector('.sidebar');
     $scope.root.sidebarHandler = function (event) {

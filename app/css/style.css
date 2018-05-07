@@ -10,9 +10,14 @@ a {
   text-decoration: none;
 }
 .fw {
-    width: 1150px;
-    max-width: 90%;
+    max-width: 1150px;
+    width: 95%;
     margin: auto;
+}
+nav {
+  width: 100%;
+  z-index: 3;
+  background-color: white;
 }
 nav a {
   display: block;
@@ -180,6 +185,7 @@ main {
 main .content {
   position: relative;
   overflow: hidden;
+  padding-top: 10px;
 }
 main .sidebar {
   box-sizing: border-box;
@@ -199,10 +205,17 @@ main article p {
 }
 .sidebar-hider {
   display: none;
+  position: absolute;
+  top: 0;
+}
+.sidebar-hider span {
+  color: white;
+  background-color: #216477;
 }
 .sidebar {
   border-left: 1px solid #eee;
   margin-left: 0;
+  width: 23.8%;
 }
 .sidebar h2 {
   margin-top: 0;

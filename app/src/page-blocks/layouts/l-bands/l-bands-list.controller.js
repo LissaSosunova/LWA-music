@@ -1,4 +1,4 @@
-app.controller("l-bands-list.controller", function($scope, $flowData, transferService) {
+app.controller("l-bands-list.controller", function($scope, $flowData, transferService, $timeout) {
     $scope.root = $scope.root || {};
     $scope.root.dataBands = {};
     $scope.root.dataCurrBand = {};
@@ -8,7 +8,7 @@ app.controller("l-bands-list.controller", function($scope, $flowData, transferSe
 
     var sidebarHiderItem = document.querySelector('.sidebar-hider span');
     var sidebar = document.querySelector('.sidebar');
-    
+
     function init() {
         $flowData.req({
             path: 'bands'
@@ -16,11 +16,22 @@ app.controller("l-bands-list.controller", function($scope, $flowData, transferSe
             .then(function success(response) {
                 $scope.root.dataBands = response.data.bandsAll;
                 $scope.root.bandListRender = $scope.root.dataBands;
+                
+                $timeout(function(){
+                    $scope.root.sidebar = document.querySelector('.sidebar');
+                    $scope.root.sidebarHeight = sidebar.clientHeight;
+                    window.onscroll = function () {
+                        $scope.root.floatHeader();
+                        $scope.root.floatSidebar($scope.root.sidebarHeight, $scope.root.sidebar);
+                        $scope.root.floatSidebarHider($scope.root.sidebarHeight);
+                    } 
+                })    
             });
     }
     init();
 
     $scope.displayCurrBand = function(item){
+        window.scrollTo(0,0);
         let key = item.band.toLowerCase();
         sidebar.classList.remove('sidebar-visible');
         sidebar.classList.add('sidebar-hidden');
