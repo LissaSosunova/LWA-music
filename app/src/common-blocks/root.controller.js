@@ -125,17 +125,14 @@ app.controller("root.controller", function($scope, $flowData, $timeout, transfer
                         sidebar.style.top = pos + sidebarHiderHeight + 'px';
                         transferService.set({name: 'posFromDownSidebar', data: 0});
                         abs = false;
-                        //console.log('1', pos);
                     }
                     else if (abs) {
                         let pos = transferService.get('posFromUpSidebar')
                         sidebar.style.top = pos + sidebarHiderHeight +'px';
                         transferService.set({name: 'posFromDownSidebar', data: scrolled-sidebarHeight});
-                        //console.log('2');
                     }
                     else {
                         transferService.set({name: 'posFromDownSidebar', data: scrolled-sidebarHeight});
-                        //console.log('3');
                     }
                     sidebar.style.position = 'absolute';
                     transferService.set({name: 'scrollFromDownSidebar', data: scrolled});
@@ -148,7 +145,6 @@ app.controller("root.controller", function($scope, $flowData, $timeout, transfer
                         sidebar.style.top = sidebarHiderHeight;
                         transferService.set({name: 'posFromUpSidebar', data: 0});
                         abs = true;
-                        //console.log('4');
                     }
                     else if (scrolled > scrollForSidebar-sidebarHeight) {
                         let pos = transferService.get('posFromDownSidebar');
@@ -156,14 +152,12 @@ app.controller("root.controller", function($scope, $flowData, $timeout, transfer
                         sidebar.style.top = pos + sidebarHiderHeight + 'px';
                         transferService.set({name: 'posFromUpSidebar', data: pos});
                         abs = true;
-                       // console.log('5');
                     }
                     else if (scrolled < scrollForSidebar-sidebarHeight) {
                         sidebar.style.position = 'absolute';
                         sidebar.style.top = scrolled + sidebarHiderHeight+'px';
                         transferService.set({name: 'posFromUpSidebar', data: scrolled});
                         abs = true;
-                        //console.log('6');
                     }	
                 transferService.set({name: 'scrollFromUpSidebar', data: scrolled});
                 }    

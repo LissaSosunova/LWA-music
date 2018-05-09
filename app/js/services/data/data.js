@@ -1,9 +1,9 @@
-app.service('$data', function($http) {
+app.service('$data', function($http, $getMock) {
 
     this.req = function (params) {
         return $http({
             method: 'GET',
-            url: 'http://localhost:5000/' + params.path
+            url: $getMock.getURI() + params.path
         });
     }
 });
