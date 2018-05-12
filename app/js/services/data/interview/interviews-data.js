@@ -1,8 +1,8 @@
-app.service('$interviewsData', function ($http) {
+app.service('$interviewsData', function ($http, $getMock) {
     this.interviewsList = function () {
         return $http({
             method: 'GET',
-            url: 'http://localhost:5000/interview/'
+            url: $getMock.getURI()+'interview/'
         })
     }
 });

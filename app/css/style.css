@@ -237,6 +237,7 @@ main article p {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 @media only screen and (max-width: 975px) {
   div.logo {
 		border: none;
@@ -311,5 +312,8 @@ main article p {
     font-size: 24px;
     cursor: pointer;
     text-align: right;
+  }
+  .content {
+    width: 85%;
   }
 }
